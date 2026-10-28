@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1408" height="1004" viewBox="0 0 1408 1004"><foreignObject x="0" y="0" width="1408" height="1004"><div xmlns="http://www.w3.org/1999/xhtml"><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+body{margin:0}
+a{color:#000099}a:hover{color:#00006b}
+.cp button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+.cp-nav{transition:background .2s ease, color .2s ease}
+.cp-nav:hover{background:#F2F3F5 !important}
+.cp-nav svg{transition:transform .2s ease}
+.cp-nav:hover svg{transform:translateX(2px)}
+.cp-tile{transition:background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease}
+.cp-tile:hover{background:#F7F8F9 !important;border-color:#C4C6CC !important;box-shadow:0 4px 14px rgba(0,0,0,.06);transform:translateY(-2px)}
+.cp-tab{transition:color .2s ease, background .2s ease, border-color .25s ease;border-radius:4px 4px 0 0}
+.cp-tab:hover{background:#F2F3F5}
+.cp-rail{transition:background .2s ease}
+.cp-rail:hover{background:#F2F3F5}
+.cp-head:hover{background:#F2F3F5 !important}
+.cp-foot{transition:color .2s ease, background .2s ease;padding:4px 8px;border-radius:4px}
+.cp-foot:hover{background:#D9DADD}
+@keyframes cpSlide{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+@keyframes cpFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cp-panel{}
+.cp-page{}
+.cp-btn{transition:background .2s ease}
+.cp-btn:hover{background:#00006b !important}
+.cp-x{transition:background .2s ease;border-radius:4px}
+.cp-x:hover{background:#F2F3F5}
+.cp-widget{transition:box-shadow .25s ease, transform .25s ease}
+.cp-widget:hover{box-shadow:0 10px 28px rgba(0,0,0,.07);transform:translateY(-2px)}
+@keyframes cpWiggle{0%,100%{transform:rotate(-.35deg)}50%{transform:rotate(.35deg)}}
+.cp-wiggle{}
+.cp-row{transition:background .2s ease}
+.cp-row:hover{background:#F2F3F5 !important}
+.cp-ghost{transition:background .2s ease}
+.cp-ghost:hover{background:#F2F3F5 !important}
+@keyframes cpPing{0%{box-shadow:0 0 0 0 rgba(0,0,153,.45)}70%,100%{box-shadow:0 0 0 6px rgba(0,0,153,0)}}
+.cp-badge{}
+.cp-check{accent-color:#000099;width:16px;height:16px}
+.cp input:focus{outline:none;border-color:#000099 !important}
+.cp button:focus-visible{outline:2px solid #000099;outline-offset:2px}
+</style><div xmlns="http://www.w3.org/1999/xhtml">
+
+<div class="cp" style="width: 1408px; height: 1004px; box-sizing: border-box; background: #F5F6F7; font-family: Inter, system-ui, sans-serif; color: #1F2024; font-size: 14px; display: flex; flex-direction: column; overflow: hidden; border-radius: 12px">
+
+<header style="height: 52px; flex: none; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 16px 0 18px; box-shadow: 0 1px 3px rgba(0,0,0,.08)">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: .08em; color: #000099; font-weight: 600; line-height: 1.2">
+<div style="width: 140px; height: 26px; border: 1px dashed #A0A3B8; border-radius: 4px; display: flex; align-items: center; justify-content: center">[LOGO]</div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="color: #4A4C55; font-weight: 500">Logged in as John Doe (Parkbank AG)</span>
+<button aria-label="Profil" style="width: 32px; height: 32px; border-radius: 50%; background: #E3F1FF; display: flex; align-items: center; justify-content: center">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E7BE6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+</button>
+<button style="font-weight: 600; color: #4A4C55; min-width: 28px; height: 32px">DE</button>
+</div>
+</header>
+
+<div style="flex: 1; display: flex; gap: 12px; padding: 12px 0 12px 14px; min-height: 0">
+
+
+
+<nav aria-label="Hauptmenü" style="width: 56px; flex: none; background: #FFFFFF; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); display: flex; flex-direction: column; align-items: center; padding-top: 8px">
+<button aria-label="Menü öffnen" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+</nav>
+
+
+
+<main class="cp-page" style="flex: 1; min-width: 0; background: #F5F6F7; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); display: flex; flex-direction: column; overflow: hidden">
+<div style="background: #FFFFFF; padding: 24px 32px 20px; flex: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div>
+<h1 style="margin: 0 0 4px; font-size: 22px; font-weight: 600">Home</h1>
+<p style="margin: 0; color: #666666">Your personal dashboard</p>
+</div>
+<div style="display: flex; gap: 8px">
+
+<button class="cp-btn" style="height: 36px; padding: 0 16px; background: #000099; color: #FFFFFF; border-radius: 3px; font-weight: 600">Customize</button>
+</div>
+</div>
+<div style="flex: 1; overflow-y: auto; padding: 28px 32px 32px; display: flex; flex-direction: column; min-height: 0">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; align-content: start; gap: 20px">
+
+
+<section class="cp-widget " style="grid-column: 1 / -1; position: relative; background: #000099; color: #FFFFFF; border-radius: 12px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; letter-spacing: .12em; opacity: .75">WELCOME BACK</span>
+<h2 style="margin: 0; font-size: 26px; font-weight: 600">Good morning, John</h2>
+<p style="margin: 0; opacity: .85">You have 2 new messages, 3 new tasks and 2 open tickets.</p>
+</div>
+<div style="display: flex; gap: 10px; flex: none">
+<button style="height: 38px; padding: 0 18px; background: #FFFFFF; color: #000099; border-radius: 3px; font-weight: 600">Go to tasks</button>
+<button style="height: 38px; padding: 0 18px; background: transparent; color: #FFFFFF; border: 1px solid rgba(255,255,255,.6); border-radius: 3px; font-weight: 600">New ticket</button>
+</div>
+</section>
+
+
+
+<section class="cp-widget " style="position: relative; background: #FFFFFF; border: 1px solid #E4E5E7; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 0">
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; min-height: 30px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 8px">Messages <span style="font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: #E8EEFF; color: #000099">2 new</span></h3>
+<button class="cp-ghost" style="padding: 4px 6px; border-radius: 3px; color: #000099; font-weight: 500">View all →</button>
+</div>
+
+<button class="cp-row" style="display: flex; gap: 12px; align-items: center; padding: 12px 8px; margin: 0 -8px; border-radius: 6px; border-top: 1px solid #F0F1F3">
+<span style="width: 34px; height: 34px; border-radius: 50%; background: #EEF0F3; color: #4A4C55; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none">AS</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Anna Schmidt</span>
+<span style="font-size: 13px; color: #666666; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">Lorem ipsum dolor sit amet, consetetur</span>
+</span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: none">
+<span style="font-size: 12px; color: #666666">09:42</span>
+<span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #000099"></span>
+</span>
+</button>
+
+<button class="cp-row" style="display: flex; gap: 12px; align-items: center; padding: 12px 8px; margin: 0 -8px; border-radius: 6px; border-top: 1px solid #F0F1F3">
+<span style="width: 34px; height: 34px; border-radius: 50%; background: #EEF0F3; color: #4A4C55; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none">MW</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Markus Weber</span>
+<span style="font-size: 13px; color: #666666; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">Sed diam nonumy eirmod tempor invidunt</span>
+</span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: none">
+<span style="font-size: 12px; color: #666666">08:15</span>
+<span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #000099"></span>
+</span>
+</button>
+
+<button class="cp-row" style="display: flex; gap: 12px; align-items: center; padding: 12px 8px; margin: 0 -8px; border-radius: 6px; border-top: 1px solid #F0F1F3">
+<span style="width: 34px; height: 34px; border-radius: 50%; background: #EEF0F3; color: #4A4C55; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex: none">LB</span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 500">Lisa Braun</span>
+<span style="font-size: 13px; color: #666666; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">At vero eos et accusam et justo duo</span>
+</span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: none">
+<span style="font-size: 12px; color: #666666">Yesterday</span>
+<span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: transparent"></span>
+</span>
+</button>
+
+</section>
+
+
+
+<section class="cp-widget " style="position: relative; background: #FFFFFF; border: 1px solid #E4E5E7; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 30px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Tasks</h3>
+<button class="cp-ghost" style="padding: 4px 6px; border-radius: 3px; color: #000099; font-weight: 500">View all →</button>
+</div>
+<div style="display: flex; align-items: center; gap: 16px">
+<div style="display: flex; align-items: baseline; gap: 6px"><span style="font-size: 34px; font-weight: 600; color: #000099; line-height: 1">4</span><span style="color: #666666">open</span></div>
+</div>
+<div style="display: flex; flex-direction: column">
+
+<button class="cp-row" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 8px; margin: 0 -8px; border-radius: 4px; border-top: 1px solid #F0F1F3">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #000099; flex: none"></span><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600">Lorem ipsum dolor sit amet</span></span>
+<span style="flex: none; font-size: 12px; font-weight: 600; color: #B42318">Today</span>
+</button>
+
+<button class="cp-row" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 8px; margin: 0 -8px; border-radius: 4px; border-top: 1px solid #F0F1F3">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #000099; flex: none"></span><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600">Consetetur sadipscing elitr</span></span>
+<span style="flex: none; font-size: 12px; font-weight: 600; color: #8A5300">Tomorrow</span>
+</button>
+
+<button class="cp-row" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 8px; margin: 0 -8px; border-radius: 4px; border-top: 1px solid #F0F1F3">
+<span style="display: flex; align-items: center; gap: 10px; min-width: 0"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #000099; flex: none"></span><span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600">Sed diam nonumy eirmod tempor</span></span>
+<span style="flex: none; font-size: 12px; font-weight: 600; color: #4A4C55">28 Oct</span>
+</button>
+
+</div>
+</section>
+
+
+
+<section class="cp-widget " style="position: relative; background: #FFFFFF; border: 1px solid #E4E5E7; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 0">
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; min-height: 30px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Tickets</h3>
+<button class="cp-ghost" style="padding: 4px 8px; border-radius: 3px; color: #000099; font-weight: 500">+ New ticket</button>
+</div>
+
+<div class="cp-row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 8px; margin: 0 -8px; border-radius: 4px; border-top: 1px solid #F0F1F3">
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">Lorem ipsum dolor sit amet</span>
+<span style="font-size: 12px; color: #666666">#[NR] · Admission · 2 h ago</span>
+</span>
+<span style="flex: none; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 10px; background: #E8EEFF; color: #000099">Open</span>
+</div>
+
+<div class="cp-row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 8px; margin: 0 -8px; border-radius: 4px; border-top: 1px solid #F0F1F3">
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">Consetetur sadipscing elitr</span>
+<span style="font-size: 12px; color: #666666">#[NR] · Billing · Yesterday</span>
+</span>
+<span style="flex: none; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 10px; background: #FFF4E0; color: #8A5300">In review</span>
+</div>
+
+<div class="cp-row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 8px; margin: 0 -8px; border-radius: 4px; border-top: 1px solid #F0F1F3">
+<span style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">Sed diam nonumy eirmod</span>
+<span style="font-size: 12px; color: #666666">#[NR] · Technical issue · 22 Oct</span>
+</span>
+<span style="flex: none; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 10px; background: #E6F4EA; color: #1B6B36">Resolved</span>
+</div>
+
+</section>
+
+
+
+<section class="cp-widget " style="position: relative; background: #FFFFFF; border: 1px solid #E4E5E7; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 30px">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Favorites</h3>
+<button class="cp-ghost" style="padding: 4px 6px; border-radius: 3px; color: #000099; font-weight: 500">Manage</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 66px; gap: 15px">
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Tile Name</span><span style="color: #4A4C55">Subtitle</span></span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Tile Name</span><span style="color: #4A4C55">Subtitle</span></span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Tile Name</span><span style="color: #4A4C55">Subtitle</span></span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Tile Name</span><span style="color: #4A4C55">Subtitle</span></span>
+</button>
+
+</div>
+</section>
+
+
+</div>
+</div>
+</main>
+
+
+
+
+
+
+<div style="flex: none; display: flex; border-radius: 10px 0 0 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); background: #FFFFFF; overflow: hidden">
+
+
+<aside aria-label="Support" style="width: 62px; display: flex; flex-direction: column; padding: 8px 0">
+<button class="cp-rail" aria-label="Support-Panel umschalten" style="height: 40px; display: flex; align-items: center; justify-content: center">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: none; transition: transform .25s ease"><path d="M15 6l-6 6 6 6"/></svg>
+</button>
+
+<button class="cp-rail" aria-label="Help" aria-pressed="false" style="height: 70px; display: flex; align-items: center; justify-content: center; position: relative">
+<span aria-hidden="true" style="position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 0 2px 2px 0; background: transparent; transition: background .2s ease"></span>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="15" fill="#FFFFFF" stroke="#000099" stroke-width="2" style="transition: fill .2s ease"/><path d="M16 8C17.1042 8 18.1406 8.20833 19.1094 8.625C20.0781 9.04167 20.9271 9.61458 21.6562 10.3438C22.3854 11.0729 22.9583 11.9219 23.375 12.8906C23.7917 13.8594 24 14.8958 24 16C24 17.1042 23.7917 18.1406 23.375 19.1094C22.9583 20.0781 22.3854 20.9271 21.6562 21.6562C20.9271 22.3854 20.0781 22.9583 19.1094 23.375C18.1406 23.7917 17.1042 24 16 24C14.8958 24 13.8594 23.7917 12.8906 23.375C11.9219 22.9583 11.0729 22.3854 10.3438 21.6562C9.61458 20.9271 9.04167 20.0781 8.625 19.1094C8.20833 18.1406 8 17.1042 8 16C8 14.8958 8.20833 13.8594 8.625 12.8906C9.04167 11.9219 9.61458 11.0729 10.3438 10.3438C11.0729 9.61458 11.9219 9.04167 12.8906 8.625C13.8594 8.20833 14.8958 8 16 8ZM17.1875 12.375C17.1875 12.0417 17.0729 11.7552 16.8438 11.5156C16.6146 11.276 16.3333 11.1562 16 11.1562C15.6667 11.1562 15.3854 11.276 15.1562 11.5156C14.9271 11.7552 14.8125 12.0417 14.8125 12.375C14.8125 12.7083 14.9271 12.9896 15.1562 13.2188C15.3854 13.4479 15.6667 13.5625 16 13.5625C16.3333 13.5625 16.6146 13.4479 16.8438 13.2188C17.0729 12.9896 17.1875 12.7083 17.1875 12.375ZM17 15.8125C17 15.5208 16.9062 15.2812 16.7188 15.0938C16.5312 14.9062 16.2917 14.8125 16 14.8125C15.7083 14.8125 15.4688 14.9062 15.2812 15.0938C15.0938 15.2812 15 15.5208 15 15.8125V19.8125C15 20.0833 15.0938 20.3177 15.2812 20.5156C15.4688 20.7135 15.7083 20.8125 16 20.8125C16.2917 20.8125 16.5312 20.7135 16.7188 20.5156C16.9062 20.3177 17 20.0833 17 19.8125V15.8125Z" fill="#000099"/></svg>
+</button>
+
+<button class="cp-rail" aria-label="Open a support ticket" aria-pressed="false" style="height: 70px; display: flex; align-items: center; justify-content: center; position: relative">
+<span aria-hidden="true" style="position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 0 2px 2px 0; background: transparent; transition: background .2s ease"></span>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="15" fill="#FFFFFF" stroke="#000099" stroke-width="2" style="transition: fill .2s ease"/><path d="M22.3906 10C22.8281 10 23.2031 10.1562 23.5156 10.4688C23.8281 10.7812 23.9844 11.1562 23.9844 11.5938V19.5938C23.9844 20.0312 23.8281 20.4062 23.5156 20.7188C23.2031 21.0312 22.8281 21.1875 22.3906 21.1875H9.64062C9.18229 21.1875 8.79688 21.0312 8.48438 20.7188C8.17188 20.4062 8.01562 20.0312 8.01562 19.5938V11.5938C8.01562 11.1562 8.17188 10.7812 8.48438 10.4688C8.79688 10.1562 9.18229 10 9.64062 10H22.3906ZM22.3906 11.5938H9.64062V19.5938H22.3906V11.5938ZM12.0156 15.5938C11.4948 15.5938 11.2344 15.3229 11.2344 14.7812C11.2344 14.2604 11.4948 14 12.0156 14H16.0156C16.2448 14 16.4375 14.0729 16.5938 14.2188C16.75 14.3646 16.8281 14.5521 16.8281 14.7812C16.8281 15.0312 16.75 15.2292 16.5938 15.375C16.4375 15.5208 16.2448 15.5938 16.0156 15.5938H12.0156ZM20.0156 14.7812C19.474 14.7812 19.2031 14.5208 19.2031 14V13.1875C19.2031 12.6667 19.474 12.4062 20.0156 12.4062H20.7969C21.3385 12.4062 21.6094 12.6667 21.6094 13.1875V14C21.6094 14.5208 21.3385 14.7812 20.7969 14.7812H20.0156ZM12.0156 18C11.7865 18 11.599 17.9219 11.4531 17.7656C11.3073 17.6094 11.2344 17.4167 11.2344 17.1875C11.2344 16.6667 11.4948 16.4062 12.0156 16.4062H14.4219C14.9427 16.4062 15.2031 16.6667 15.2031 17.1875C15.2031 17.4167 15.1302 17.6094 14.9844 17.7656C14.8385 17.9219 14.651 18 14.4219 18H12.0156Z" fill="#000099"/></svg>
+</button>
+
+<button class="cp-rail" aria-label="Favorites" aria-pressed="false" style="height: 70px; display: flex; align-items: center; justify-content: center; position: relative">
+<span aria-hidden="true" style="position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 0 2px 2px 0; background: transparent; transition: background .2s ease"></span>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="15" fill="#FFFFFF" stroke="#000099" stroke-width="2" style="transition: fill .2s ease"/><path d="M18.0313 14.0625C17.9271 14.0208 17.8229 13.9688 17.7188 13.9062C17.6146 13.8438 17.5625 13.7708 17.5625 13.6875L16.0625 10.625L14.5313 13.6875C14.3438 13.9375 14.1354 14.0625 13.9063 14.0625L10.5313 14.5625L12.9375 16.875C13.0208 16.9583 13.0938 17.0677 13.1563 17.2031C13.2188 17.3385 13.2292 17.4688 13.1875 17.5938L12.625 20.9375L14.8438 19.75C15.0104 19.625 15.1979 19.5938 15.4063 19.6562C15.6146 19.7188 15.7708 19.8542 15.875 20.0625C16 20.2708 16.0313 20.4896 15.9688 20.7188C15.9063 20.9479 15.7708 21.1042 15.5625 21.1875L11.9063 23.0938C11.7396 23.1354 11.5781 23.1562 11.4219 23.1562C11.2656 23.1562 11.1354 23.1042 11.0313 23C10.7396 22.8125 10.625 22.5521 10.6875 22.2188L11.5 17.75L8.21876 14.5625C8.03126 14.375 7.97918 14.1042 8.06251 13.75C8.14584 13.4792 8.36459 13.2917 8.71876 13.1875L13.25 12.5625L15.25 8.46875C15.4167 8.15625 15.6563 8 15.9688 8C16.1354 8 16.2761 8.05208 16.3906 8.15625C16.5052 8.26042 16.6042 8.36458 16.6875 8.46875L18.6875 12.5625L23.25 13.1875C23.4167 13.2292 23.5625 13.3125 23.6875 13.4375C23.8125 13.5625 23.875 13.6667 23.875 13.75C23.8958 13.7917 23.9063 13.9062 23.9063 14.0938C23.9063 14.2812 23.8438 14.4375 23.7188 14.5625L22.4375 15.75C22.2708 15.9167 22.0833 16 21.875 16C21.6667 16 21.4792 15.9167 21.3125 15.75C21.1458 15.5833 21.0625 15.3958 21.0625 15.1875C21.0625 14.9792 21.1458 14.7917 21.3125 14.625L21.4063 14.5625L18.0313 14.0625ZM23.1563 19.9688C23.3854 19.9688 23.5781 20.0469 23.7344 20.2031C23.8906 20.3594 23.9688 20.5521 23.9688 20.7812C23.9688 21.0104 23.8906 21.1979 23.7344 21.3438C23.5781 21.4896 23.3854 21.5625 23.1563 21.5625H18.375C17.8333 21.5625 17.5625 21.3021 17.5625 20.7812C17.5625 20.5521 17.6354 20.3594 17.7813 20.2031C17.9271 20.0469 18.125 19.9688 18.375 19.9688H23.1563ZM23.1563 17.5938C23.3854 17.5938 23.5781 17.6667 23.7344 17.8125C23.8906 17.9583 23.9688 18.1458 23.9688 18.375C23.9688 18.625 23.8906 18.8229 23.7344 18.9688C23.5781 19.1146 23.3854 19.1875 23.1563 19.1875H18.375C17.8333 19.1875 17.5625 18.9167 17.5625 18.375C17.5625 17.8542 17.8333 17.5938 18.375 17.5938H23.1563ZM23.1563 22.375C23.3854 22.375 23.5781 22.4479 23.7344 22.5938C23.8906 22.7396 23.9688 22.9375 23.9688 23.1875C23.9688 23.4167 23.8906 23.6042 23.7344 23.75C23.5781 23.8958 23.3854 23.9688 23.1563 23.9688H18.375C17.8333 23.9688 17.5625 23.7083 17.5625 23.1875C17.5625 22.6458 17.8333 22.375 18.375 22.375H23.1563Z" fill="#000099"/></svg>
+</button>
+
+</aside>
+</div>
+</div>
+
+<footer style="height: 46px; flex: none; background: #E4E5E7; display: flex; align-items: center; justify-content: center; gap: 48px; font-size: 12px; font-weight: 500">
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Imprint</a>
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Data Privacy</a>
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Technical Requirements</a>
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Terms of Use</a>
+</footer>
+</div>
+</div></div></foreignObject></svg>

@@ -1,0 +1,530 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1408" height="1004" viewBox="0 0 1408 1004"><foreignObject x="0" y="0" width="1408" height="1004"><div xmlns="http://www.w3.org/1999/xhtml"><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+body{margin:0}
+a{color:#000099}a:hover{color:#00006b}
+.cp button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+.cp-nav{transition:background .2s ease, color .2s ease}
+.cp-nav:hover{background:#F2F3F5 !important}
+.cp-nav svg{transition:transform .2s ease}
+.cp-nav:hover svg{transform:translateX(2px)}
+.cp-tile{transition:background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease}
+.cp-tile:hover{background:#F7F8F9 !important;border-color:#C4C6CC !important;box-shadow:0 4px 14px rgba(0,0,0,.06);transform:translateY(-2px)}
+.cp-tab{transition:color .2s ease, background .2s ease, border-color .25s ease;border-radius:4px 4px 0 0}
+.cp-tab:hover{background:#F2F3F5}
+.cp-rail{transition:background .2s ease}
+.cp-rail:hover{background:#F2F3F5}
+.cp-head:hover{background:#F2F3F5 !important}
+.cp-foot{transition:color .2s ease, background .2s ease;padding:4px 8px;border-radius:4px}
+.cp-foot:hover{background:#D9DADD}
+@keyframes cpSlide{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+@keyframes cpFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cp-panel{}
+.cp-page{}
+.cp-btn{transition:background .2s ease}
+.cp-btn:hover{background:#00006b !important}
+.cp-x{transition:background .2s ease;border-radius:4px}
+.cp-x:hover{background:#F2F3F5}
+.cp-widget{transition:box-shadow .25s ease, transform .25s ease}
+.cp-widget:hover{box-shadow:0 10px 28px rgba(0,0,0,.07);transform:translateY(-2px)}
+@keyframes cpWiggle{0%,100%{transform:rotate(-.35deg)}50%{transform:rotate(.35deg)}}
+.cp-wiggle{}
+.cp-row{transition:background .2s ease}
+.cp-row:hover{background:#F2F3F5 !important}
+.cp-ghost{transition:background .2s ease}
+.cp-ghost:hover{background:#F2F3F5 !important}
+@keyframes cpPing{0%{box-shadow:0 0 0 0 rgba(0,0,153,.45)}70%,100%{box-shadow:0 0 0 6px rgba(0,0,153,0)}}
+.cp-badge{}
+.cp-check{accent-color:#000099;width:16px;height:16px}
+.cp input:focus{outline:none;border-color:#000099 !important}
+.cp button:focus-visible{outline:2px solid #000099;outline-offset:2px}
+</style><div xmlns="http://www.w3.org/1999/xhtml">
+
+<div class="cp" style="width: 1408px; height: 1004px; box-sizing: border-box; background: #F5F6F7; font-family: Inter, system-ui, sans-serif; color: #1F2024; font-size: 14px; display: flex; flex-direction: column; overflow: hidden; border-radius: 12px">
+
+<header style="height: 52px; flex: none; background: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 0 16px 0 18px; box-shadow: 0 1px 3px rgba(0,0,0,.08)">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: .08em; color: #000099; font-weight: 600; line-height: 1.2">
+<div style="width: 140px; height: 26px; border: 1px dashed #A0A3B8; border-radius: 4px; display: flex; align-items: center; justify-content: center">[LOGO]</div>
+</div>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="color: #4A4C55; font-weight: 500">Logged in as John Doe (Parkbank AG)</span>
+<button aria-label="Profil" style="width: 32px; height: 32px; border-radius: 50%; background: #E3F1FF; display: flex; align-items: center; justify-content: center">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1E7BE6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+</button>
+<button style="font-weight: 600; color: #4A4C55; min-width: 28px; height: 32px">DE</button>
+</div>
+</header>
+
+<div style="flex: 1; display: flex; gap: 12px; padding: 12px 0 12px 14px; min-height: 0">
+
+
+<nav aria-label="Hauptmenü" style="width: 272px; flex: none; background: #FFFFFF; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); display: flex; flex-direction: column; overflow-y: auto">
+<button class="cp-head" style="display: flex; align-items: center; gap: 10px; margin: 6px 6px 4px; padding: 10px 10px; border-radius: 3px; color: #000099; font-weight: 600; transition: background .2s ease">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+Menu
+</button>
+<div style="padding: 0 8px 8px 16px; position: relative">
+<label for="cp-search" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Search</label>
+<input id="cp-search" type="text" placeholder="Search" style="width: 100%; box-sizing: border-box; height: 32px; border: 1px solid #D9D9D9; border-radius: 2px; padding: 0 32px 0 12px; font: inherit; color: #1F2024" />
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8C95" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="position: absolute; right: 16px; top: 8px"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+</div>
+
+
+
+<button class="cp-nav" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Home</span>
+
+
+</button>
+
+
+
+
+<button class="cp-nav" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6v3H9zM6 6h2M16 6h2M6 6v14h12V6M9 13l2 2 4-4"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Tasks</span>
+
+<span class="cp-badge" aria-label="3 new tasks" style="min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 9px; background: #000099; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center">3</span>
+
+
+</button>
+
+
+
+<div style="padding: 18px 16px 8px; font-size: 10px; letter-spacing: .14em; color: #4A4C55; font-weight: 500">SERVICES</div>
+
+
+
+
+
+<button class="cp-nav" aria-expanded="false" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.28125 12.1562C2.51042 12.1562 2.69271 12.2292 2.82812 12.375C2.96354 12.5208 3.03125 12.7083 3.03125 12.9375C3.03125 13.1667 2.96354 13.349 2.82812 13.4844C2.69271 13.6198 2.51042 13.6875 2.28125 13.6875H0.75C0.520833 13.6875 0.338542 13.6198 0.203125 13.4844C0.0677083 13.349 0 13.1667 0 12.9375V11.4062C0 10.2604 0.307292 9.24479 0.921875 8.35938C1.53646 7.47396 2.34375 6.84375 3.34375 6.46875C2.63542 5.76042 2.28125 4.875 2.28125 3.8125C2.28125 3.27083 2.38021 2.77083 2.57812 2.3125C2.77604 1.85417 3.04167 1.45312 3.375 1.10938C3.70833 0.765625 4.10938 0.494792 4.57812 0.296875C5.04688 0.0989583 5.54167 0 6.0625 0C6.60417 0 7.10417 0.0989583 7.5625 0.296875C8.02083 0.494792 8.42188 0.765625 8.76562 1.10938C9.10938 1.45312 9.38021 1.85417 9.57812 2.3125C9.77604 2.77083 9.875 3.27083 9.875 3.8125C9.875 4.33333 9.77604 4.82812 9.57812 5.29688C9.38021 5.76562 9.10938 6.16667 8.76562 6.5C8.42188 6.83333 8.02083 7.09896 7.5625 7.29688C7.10417 7.49479 6.60417 7.59375 6.0625 7.59375H5.3125C4.79167 7.59375 4.29688 7.69271 3.82812 7.89062C3.35938 8.08854 2.95312 8.35938 2.60938 8.70312C2.26562 9.04688 1.99479 9.44792 1.79688 9.90625C1.59896 10.3646 1.5 10.8646 1.5 11.4062V12.1562H2.28125ZM6.0625 1.53125C5.41667 1.53125 4.875 1.74479 4.4375 2.17188C4 2.59896 3.78125 3.14583 3.78125 3.8125C3.78125 4.45833 4 5 4.4375 5.4375C4.875 5.875 5.41667 6.09375 6.0625 6.09375C6.72917 6.09375 7.27604 5.875 7.70312 5.4375C8.13021 5 8.34375 4.45833 8.34375 3.8125C8.34375 3.14583 8.13021 2.59896 7.70312 2.17188C7.27604 1.74479 6.72917 1.53125 6.0625 1.53125ZM12.6875 9.34375C12.8333 9.48958 12.9062 9.66667 12.9062 9.875C12.9062 10.0833 12.8333 10.2604 12.6875 10.4062L7.375 15.75C7.22917 15.8958 7.05208 15.9688 6.84375 15.9688H5.3125C5.08333 15.9688 4.90104 15.901 4.76562 15.7656C4.63021 15.6302 4.5625 15.4479 4.5625 15.2188V13.6875C4.5625 13.4792 4.63542 13.3021 4.78125 13.1562L10.0938 7.84375C10.2604 7.67708 10.4375 7.59375 10.625 7.59375C10.8542 7.59375 11.0312 7.67708 11.1562 7.84375L12.6875 9.34375ZM11.0938 9.875L10.625 9.4375L6.0625 14V14.4375H6.53125L11.0938 9.875ZM14.9688 7.0625C15.1146 7.20833 15.1875 7.38542 15.1875 7.59375C15.1875 7.80208 15.1146 7.97917 14.9688 8.125L14.2188 8.90625C14.0729 9.05208 13.8958 9.125 13.6875 9.125C13.4792 9.125 13.3021 9.05208 13.1562 8.90625L11.625 7.375C11.4792 7.22917 11.4062 7.05208 11.4062 6.84375C11.4062 6.63542 11.4792 6.45833 11.625 6.3125L12.375 5.5625C12.5417 5.39583 12.7188 5.3125 12.9062 5.3125C13.1354 5.3125 13.3125 5.39583 13.4375 5.5625L14.9688 7.0625Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: none; transition: transform .2s"><path d="M9 6l6 6-6 6"/></svg>
+
+</button>
+
+
+
+
+<button class="cp-nav" aria-expanded="false" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.9375 8.375C13.1667 8.375 13.349 8.44271 13.4844 8.57812C13.6198 8.71354 13.6875 8.89583 13.6875 9.125V15.2188C13.6875 15.7188 13.4375 15.9688 12.9375 15.9688H0.78125C0.260417 15.9688 0 15.7188 0 15.2188V6.09375C0 5.86458 0.0729167 5.68229 0.21875 5.54688C0.364583 5.41146 0.552083 5.34375 0.78125 5.34375H3.75V3.8125C3.75 3.60417 3.84375 3.40625 4.03125 3.21875L6.09375 1.90625V0.78125C6.09375 0.552083 6.16146 0.364583 6.29688 0.21875C6.43229 0.0729167 6.61458 0 6.84375 0C7.36458 0 7.625 0.260417 7.625 0.78125V1.90625L9.5 3.21875C9.70833 3.34375 9.8125 3.54167 9.8125 3.8125V8.375H12.9375ZM9.8125 9.90625V11.4062H12.1875V9.90625H9.8125ZM8.3125 9.90625H5.25V11.4062H8.3125V9.90625ZM8.3125 8.375V6.84375H5.25V8.375H8.3125ZM5.25 5.34375H8.3125V4.1875L6.78125 3.21875L5.25 4.1875V5.34375ZM1.53125 8.375H3.75V6.84375H1.53125V8.375ZM1.53125 9.90625V11.4062H3.75V9.90625H1.53125ZM3.75 14.4688V12.9375H1.53125V14.4688H3.75ZM8.3125 14.4688V12.9375H5.25V14.4688H8.3125ZM12.1875 14.4688V12.9375H9.8125V14.4688H12.1875Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: none; transition: transform .2s"><path d="M9 6l6 6-6 6"/></svg>
+
+</button>
+
+
+
+
+<button class="cp-nav" aria-expanded="true" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: #EDF8FF; color: #000099; font-weight: 600">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #000099"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.09375 4C4.09375 4.66667 4.32812 5.23438 4.79688 5.70312C5.26562 6.17188 5.83333 6.40625 6.5 6.40625C7.16667 6.40625 7.73438 6.17188 8.20312 5.70312C8.67188 5.23438 8.90625 4.66667 8.90625 4C8.90625 3.29167 8.67188 2.71354 8.20312 2.26562C7.73438 1.81771 7.16667 1.59375 6.5 1.59375C5.83333 1.59375 5.26562 1.82812 4.79688 2.29688C4.32812 2.76562 4.09375 3.33333 4.09375 4ZM14.5 12.0312V12C14.5 11.6042 14.4167 11.1875 14.25 10.75L14.75 10.2812C14.8333 10.1979 14.875 10.1042 14.875 10C14.875 9.89583 14.8438 9.80208 14.7812 9.71875L14.4688 9.3125C14.3646 9.20833 14.25 9.15625 14.125 9.15625C14.0833 9.15625 14.0208 9.17708 13.9375 9.21875L13.3438 9.625C13.1771 9.5 12.9948 9.38542 12.7969 9.28125C12.599 9.17708 12.3854 9.10417 12.1562 9.0625L12.0938 8.375C12.0938 8.27083 12.0573 8.18229 11.9844 8.10938C11.9115 8.03646 11.8229 8 11.7188 8H11.1875C10.9583 8 10.8229 8.125 10.7812 8.375L10.7188 9.09375C10.5104 9.15625 10.3125 9.23438 10.125 9.32812C9.9375 9.42188 9.76042 9.54167 9.59375 9.6875L9 9.28125C8.91667 9.23958 8.85417 9.21875 8.8125 9.21875C8.6875 9.21875 8.57292 9.27083 8.46875 9.375L8.15625 9.78125C8.09375 9.86458 8.0625 9.95833 8.0625 10.0625C8.0625 10.1875 8.10417 10.2812 8.1875 10.3438L8.71875 10.8438C8.65625 11.0312 8.60417 11.2188 8.5625 11.4062C8.52083 11.5938 8.5 11.7917 8.5 12V12.0938L7.78125 12.3438C7.59375 12.4062 7.5 12.5417 7.5 12.75V12.8125L7.625 13.3438C7.66667 13.4479 7.72396 13.5312 7.79688 13.5938C7.86979 13.6562 7.95833 13.6771 8.0625 13.6562L8.90625 13.5312C9.01042 13.6979 9.125 13.849 9.25 13.9844C9.375 14.1198 9.51042 14.25 9.65625 14.375L9.34375 15.2188C9.32292 15.2396 9.3125 15.2917 9.3125 15.375C9.3125 15.5417 9.38542 15.6562 9.53125 15.7188L10 15.9688C10.0417 15.9896 10.1042 16 10.1875 16C10.3542 16 10.4688 15.9375 10.5312 15.8125L11.0312 14.9375C11.2396 14.9792 11.3958 15 11.5 15C11.6042 15 11.6979 14.9948 11.7812 14.9844C11.8646 14.974 11.9583 14.9583 12.0625 14.9375L12.5312 15.75C12.5938 15.8958 12.7083 15.9688 12.875 15.9688C12.9375 15.9688 12.9896 15.9583 13.0312 15.9375L13.5 15.6875C13.6667 15.6042 13.75 15.4896 13.75 15.3438C13.75 15.2812 13.7396 15.2292 13.7188 15.1875L13.375 14.3125C13.6667 14.1042 13.9167 13.8125 14.125 13.4375L14.9375 13.5625H15C15.2083 13.5625 15.3333 13.4583 15.375 13.25L15.5 12.75V12.6562C15.5 12.4479 15.4062 12.3125 15.2188 12.25L14.5 12.0312ZM6.5 8H6.3125C5.72917 8 5.18229 8.10938 4.67188 8.32812C4.16146 8.54688 3.71354 8.84375 3.32812 9.21875C2.94271 9.59375 2.64062 10.0365 2.42188 10.5469C2.20312 11.0573 2.09375 11.6042 2.09375 12.1875V12.4062H5.5C5.72917 12.4062 5.92188 12.4792 6.07812 12.625C6.23438 12.7708 6.3125 12.9583 6.3125 13.1875C6.3125 13.4167 6.23438 13.6094 6.07812 13.7656C5.92188 13.9219 5.72917 14 5.5 14H1.3125C1.08333 14 0.890625 13.9219 0.734375 13.7656C0.578125 13.6094 0.5 13.4167 0.5 13.1875V12.1875C0.5 11.0208 0.807292 9.97917 1.42188 9.0625C2.03646 8.14583 2.84375 7.44792 3.84375 6.96875C3.42708 6.59375 3.09896 6.15625 2.85938 5.65625C2.61979 5.15625 2.5 4.60417 2.5 4C2.5 3.4375 2.60417 2.91667 2.8125 2.4375C3.02083 1.95833 3.30729 1.53646 3.67188 1.17188C4.03646 0.807292 4.45833 0.520833 4.9375 0.3125C5.41667 0.104167 5.9375 0 6.5 0C7.04167 0 7.55729 0.109375 8.04688 0.328125C8.53646 0.546875 8.96354 0.838542 9.32812 1.20312C9.69271 1.56771 9.97917 1.99479 10.1875 2.48438C10.3958 2.97396 10.5 3.48958 10.5 4.03125C10.5 4.57292 10.3958 5.08333 10.1875 5.5625C9.97917 6.04167 9.69271 6.46354 9.32812 6.82812C8.96354 7.19271 8.53646 7.47917 8.04688 7.6875C7.55729 7.89583 7.04167 8 6.5 8ZM10.0938 12C10.0938 11.5833 10.224 11.2448 10.4844 10.9844C10.7448 10.724 11.0833 10.5938 11.5 10.5938C11.9167 10.5938 12.2552 10.724 12.5156 10.9844C12.776 11.2448 12.9062 11.5833 12.9062 12C12.9062 12.4167 12.776 12.7552 12.5156 13.0156C12.2552 13.276 11.9167 13.4062 11.5 13.4062C11.0833 13.4062 10.7448 13.276 10.4844 13.0156C10.224 12.7552 10.0938 12.4167 10.0938 12Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: rotate(90deg); transition: transform .2s"><path d="M9 6l6 6-6 6"/></svg>
+
+</button>
+
+
+
+
+<button class="cp-nav" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: #EDF8FF; color: #000099; font-weight: 600">
+
+<span style="flex: 1; padding-left: 27px">Lorem ipsum</span>
+
+
+</button>
+
+
+
+
+<button class="cp-nav" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 400">
+
+<span style="flex: 1; padding-left: 27px">Lorem ipsum</span>
+
+
+</button>
+
+
+
+
+<button class="cp-nav" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 400">
+
+<span style="flex: 1; padding-left: 27px">Lorem ipsum</span>
+
+
+</button>
+
+
+
+
+<button class="cp-nav" aria-expanded="false" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.1875 5.34375C3.9375 5.34375 3.8125 5.46875 3.8125 5.71875C3.8125 5.96875 3.9375 6.09375 4.1875 6.09375H4.9375C5.47917 6.09375 5.93229 6.27604 6.29688 6.64062C6.66146 7.00521 6.84375 7.45833 6.84375 8C6.84375 8.47917 6.69271 8.89583 6.39062 9.25C6.08854 9.60417 5.72917 9.8125 5.3125 9.875V10.6562C5.3125 10.8854 5.24479 11.0677 5.10938 11.2031C4.97396 11.3385 4.79167 11.4062 4.5625 11.4062C4.33333 11.4062 4.15104 11.3385 4.01562 11.2031C3.88021 11.0677 3.8125 10.8854 3.8125 10.6562V9.875H3.0625C2.54167 9.875 2.28125 9.625 2.28125 9.125C2.28125 8.89583 2.35417 8.71354 2.5 8.57812C2.64583 8.44271 2.83333 8.375 3.0625 8.375H4.9375C5.1875 8.375 5.3125 8.25 5.3125 8C5.3125 7.75 5.1875 7.625 4.9375 7.625H4.1875C3.64583 7.625 3.19271 7.44271 2.82812 7.07812C2.46354 6.71354 2.28125 6.26042 2.28125 5.71875C2.28125 5.21875 2.43229 4.79688 2.73438 4.45312C3.03646 4.10938 3.39583 3.89583 3.8125 3.8125V3.0625C3.8125 2.83333 3.88021 2.64583 4.01562 2.5C4.15104 2.35417 4.33333 2.28125 4.5625 2.28125C5.0625 2.28125 5.3125 2.54167 5.3125 3.0625V3.8125H6.09375C6.32292 3.8125 6.50521 3.88021 6.64062 4.01562C6.77604 4.15104 6.84375 4.33333 6.84375 4.5625C6.84375 4.79167 6.77604 4.97917 6.64062 5.125C6.50521 5.27083 6.32292 5.34375 6.09375 5.34375H4.1875ZM12.1562 4.5625C12.1562 4.79167 12.0885 4.97917 11.9531 5.125C11.8177 5.27083 11.6354 5.34375 11.4062 5.34375H9.125C8.625 5.34375 8.375 5.08333 8.375 4.5625C8.375 4.33333 8.44271 4.15104 8.57812 4.01562C8.71354 3.88021 8.89583 3.8125 9.125 3.8125H11.4062C11.6354 3.8125 11.8177 3.88021 11.9531 4.01562C12.0885 4.15104 12.1562 4.33333 12.1562 4.5625ZM10.6562 6.84375C10.6562 7.36458 10.3958 7.625 9.875 7.625H9.125C8.625 7.625 8.375 7.36458 8.375 6.84375C8.375 6.61458 8.44271 6.43229 8.57812 6.29688C8.71354 6.16146 8.89583 6.09375 9.125 6.09375H9.875C10.1042 6.09375 10.2917 6.16146 10.4375 6.29688C10.5833 6.43229 10.6562 6.61458 10.6562 6.84375ZM9.125 8.375C9.33333 8.375 9.51042 8.44792 9.65625 8.59375C9.80208 8.73958 9.875 8.91667 9.875 9.125C9.875 9.35417 9.80208 9.53646 9.65625 9.67188C9.51042 9.80729 9.33333 9.875 9.125 9.875C8.91667 9.875 8.73958 9.80729 8.59375 9.67188C8.44792 9.53646 8.375 9.35417 8.375 9.125C8.375 8.91667 8.44792 8.73958 8.59375 8.59375C8.73958 8.44792 8.91667 8.375 9.125 8.375ZM7.59375 12.1562C8.11458 12.1562 8.375 12.4167 8.375 12.9375C8.375 13.1667 8.30208 13.349 8.15625 13.4844C8.01042 13.6198 7.82292 13.6875 7.59375 13.6875H2.28125C1.63542 13.6875 1.09375 13.4688 0.65625 13.0312C0.21875 12.5938 0 12.0521 0 11.4062V2.28125C0 1.63542 0.21875 1.09375 0.65625 0.65625C1.09375 0.21875 1.63542 0 2.28125 0H12.9062C13.5729 0 14.1198 0.21875 14.5469 0.65625C14.974 1.09375 15.1875 1.63542 15.1875 2.28125V5.34375C15.1875 5.57292 15.1198 5.75521 14.9844 5.89062C14.849 6.02604 14.6667 6.09375 14.4375 6.09375C14.2083 6.09375 14.026 6.02604 13.8906 5.89062C13.7552 5.75521 13.6875 5.57292 13.6875 5.34375V2.28125C13.6875 2.05208 13.6146 1.86979 13.4688 1.73438C13.3229 1.59896 13.1354 1.53125 12.9062 1.53125H2.28125C2.05208 1.53125 1.86979 1.59896 1.73438 1.73438C1.59896 1.86979 1.53125 2.05208 1.53125 2.28125V11.4062C1.53125 11.6354 1.59896 11.8177 1.73438 11.9531C1.86979 12.0885 2.05208 12.1562 2.28125 12.1562H7.59375ZM15.5 12.25C15.6875 12.3333 15.8229 12.4531 15.9062 12.6094C15.9896 12.7656 16.0104 12.9167 15.9688 13.0625C15.8646 13.4792 15.6042 13.6875 15.1875 13.6875H10.6562C10.2396 13.6875 9.97917 13.4792 9.875 13.0625C9.83333 12.9167 9.84896 12.7656 9.92188 12.6094C9.99479 12.4531 10.1042 12.3333 10.25 12.25L11.4688 11.625C11.7604 11.4792 12.0938 11.4062 12.4688 11.4062H13.3125C13.4583 11.4062 13.6198 11.4219 13.7969 11.4531C13.974 11.4844 14.1354 11.5417 14.2812 11.625L15.5 12.25ZM12.9062 7.625C13.3229 7.625 13.6823 7.77083 13.9844 8.0625C14.2865 8.35417 14.4375 8.70833 14.4375 9.125C14.4375 9.54167 14.2865 9.90104 13.9844 10.2031C13.6823 10.5052 13.3229 10.6562 12.9062 10.6562C12.4896 10.6562 12.1354 10.5052 11.8438 10.2031C11.5521 9.90104 11.4062 9.54167 11.4062 9.125C11.4062 8.70833 11.5521 8.35417 11.8438 8.0625C12.1354 7.77083 12.4896 7.625 12.9062 7.625Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: none; transition: transform .2s"><path d="M9 6l6 6-6 6"/></svg>
+
+</button>
+
+
+
+
+<button class="cp-nav" aria-expanded="false" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 11.1875C8 10.6458 7.72917 10.375 7.1875 10.375C6.66667 10.375 6.40625 10.6458 6.40625 11.1875V11.9688C6.40625 12.5104 6.66667 12.7812 7.1875 12.7812C7.72917 12.7812 8 12.5104 8 11.9688V11.1875ZM10.4062 10.375C10.4062 10.1458 10.3281 9.95833 10.1719 9.8125C10.0156 9.66667 9.82292 9.59375 9.59375 9.59375C9.36458 9.59375 9.17188 9.66667 9.01562 9.8125C8.85938 9.95833 8.78125 10.1458 8.78125 10.375V11.9688C8.78125 12.2188 8.85938 12.4167 9.01562 12.5625C9.17188 12.7083 9.36458 12.7812 9.59375 12.7812C9.82292 12.7812 10.0156 12.7083 10.1719 12.5625C10.3281 12.4167 10.4062 12.2188 10.4062 11.9688V10.375ZM12.7812 9.59375C12.7812 9.05208 12.5208 8.78125 12 8.78125C11.4583 8.78125 11.1875 9.05208 11.1875 9.59375V11.9688C11.1875 12.5104 11.4583 12.7812 12 12.7812C12.5208 12.7812 12.7812 12.5104 12.7812 11.9688V9.59375ZM9.84375 6.375H8.71875C8.51042 6.375 8.32292 6.45833 8.15625 6.625L6.5625 8.21875C6.39583 8.38542 6.3125 8.57292 6.3125 8.78125C6.3125 8.98958 6.39583 9.17708 6.5625 9.34375C6.72917 9.51042 6.91667 9.59375 7.125 9.59375C7.33333 9.59375 7.52083 9.51042 7.6875 9.34375L9.03125 8H10.3125C10.4792 8 10.6198 7.94792 10.7344 7.84375C10.849 7.73958 10.9479 7.625 11.0312 7.5L12.625 4.3125C12.75 4.10417 12.7812 3.90104 12.7188 3.70312C12.6562 3.50521 12.5208 3.36458 12.3125 3.28125C12.1042 3.19792 11.8958 3.19271 11.6875 3.26562C11.4792 3.33854 11.3125 3.47917 11.1875 3.6875L9.84375 6.375ZM15.1875 0C15.7083 0 15.9688 0.270833 15.9688 0.8125V15.1562C15.9688 15.6979 15.7083 15.9688 15.1875 15.9688H4C3.47917 15.9688 3.21875 15.6979 3.21875 15.1562V5.59375C3.21875 5.36458 3.29167 5.17708 3.4375 5.03125L8.25 0.25C8.41667 0.0833333 8.59375 0 8.78125 0H15.1875ZM14.375 1.59375H9.125L8.78125 1.90625V4C8.78125 4.4375 8.625 4.8125 8.3125 5.125C8 5.4375 7.625 5.59375 7.1875 5.59375H5.125L4.8125 5.90625V14.375H14.375V1.59375ZM5.375 0.25C5.54167 0.416667 5.625 0.598958 5.625 0.796875C5.625 0.994792 5.54167 1.17708 5.375 1.34375L1.625 5.125V15.1562C1.625 15.4062 1.54688 15.6042 1.39062 15.75C1.23438 15.8958 1.04167 15.9688 0.8125 15.9688C0.583333 15.9688 0.390625 15.8958 0.234375 15.75C0.078125 15.6042 0 15.4062 0 15.1562V4.78125C0 4.61458 0.0833333 4.42708 0.25 4.21875L4.25 0.25C4.41667 0.0833333 4.60417 0 4.8125 0C5.02083 0 5.20833 0.0833333 5.375 0.25Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: none; transition: transform .2s"><path d="M9 6l6 6-6 6"/></svg>
+
+</button>
+
+
+
+
+<button class="cp-nav" aria-expanded="false" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.875 1.4375C11.3542 1.4375 11.5938 1.67708 11.5938 2.15625V5.78125C11.5938 6.01042 11.5312 6.19271 11.4062 6.32812C11.2812 6.46354 11.1042 6.53125 10.875 6.53125C10.6458 6.53125 10.4688 6.46354 10.3438 6.32812C10.2188 6.19271 10.1562 6.01042 10.1562 5.78125V2.90625H8.71875V3.625C8.71875 3.85417 8.65104 4.03125 8.51562 4.15625C8.38021 4.28125 8.19792 4.34375 7.96875 4.34375H3.625C3.14583 4.34375 2.90625 4.10417 2.90625 3.625V2.90625H1.4375V13.0625H5.0625C5.29167 13.0625 5.47396 13.125 5.60938 13.25C5.74479 13.375 5.8125 13.5521 5.8125 13.7812C5.8125 14.0104 5.74479 14.1875 5.60938 14.3125C5.47396 14.4375 5.29167 14.5 5.0625 14.5H0.71875C0.239583 14.5 0 14.2604 0 13.7812V2.15625C0 1.67708 0.239583 1.4375 0.71875 1.4375H2.90625V0.71875C2.90625 0.239583 3.14583 0 3.625 0H7.96875C8.19792 0 8.38021 0.0625 8.51562 0.1875C8.65104 0.3125 8.71875 0.489583 8.71875 0.71875V1.4375H10.875ZM7.25 1.4375H4.34375V2.90625H7.25V1.4375ZM9.0625 10.1562C8.83333 10.1562 8.71875 10.2708 8.71875 10.5C8.71875 10.75 8.83333 10.875 9.0625 10.875H9.78125C10.3021 10.875 10.7344 11.0521 11.0781 11.4062C11.4219 11.7604 11.5938 12.1875 11.5938 12.6875C11.5938 13.1667 11.4635 13.5729 11.2031 13.9062C10.9427 14.2396 10.5938 14.4375 10.1562 14.5V15.2188C10.1562 15.4479 10.0938 15.6302 9.96875 15.7656C9.84375 15.901 9.66667 15.9688 9.4375 15.9688C9.20833 15.9688 9.03125 15.901 8.90625 15.7656C8.78125 15.6302 8.71875 15.4479 8.71875 15.2188V14.5H7.96875C7.48958 14.5 7.25 14.2604 7.25 13.7812C7.25 13.3021 7.48958 13.0625 7.96875 13.0625H9.78125C10.0312 13.0625 10.1562 12.9375 10.1562 12.6875C10.1562 12.4583 10.0312 12.3438 9.78125 12.3438H9.0625C8.5625 12.3438 8.13542 12.1667 7.78125 11.8125C7.42708 11.4583 7.25 11.0208 7.25 10.5C7.25 10.0208 7.38542 9.61979 7.65625 9.29688C7.92708 8.97396 8.28125 8.77083 8.71875 8.6875V7.96875C8.71875 7.48958 8.95833 7.25 9.4375 7.25C9.91667 7.25 10.1562 7.48958 10.1562 7.96875V8.6875H10.875C11.1042 8.6875 11.2812 8.75521 11.4062 8.89062C11.5312 9.02604 11.5938 9.20833 11.5938 9.4375C11.5938 9.91667 11.3542 10.1562 10.875 10.1562H9.0625Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: none; transition: transform .2s"><path d="M9 6l6 6-6 6"/></svg>
+
+</button>
+
+
+
+
+<button class="cp-nav" aria-expanded="false" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.7188 0.25C15.8854 0.416667 15.9688 0.59375 15.9688 0.78125V15.1562C15.9688 15.3646 15.8958 15.5521 15.75 15.7188C15.6042 15.8854 15.4062 15.9688 15.1562 15.9688H4C3.75 15.9688 3.55208 15.8854 3.40625 15.7188C3.26042 15.5521 3.1875 15.3646 3.1875 15.1562V5.59375C3.1875 5.38542 3.27083 5.19792 3.4375 5.03125L8.21875 0.25C8.36458 0.0833333 8.55208 0 8.78125 0H15.1562C15.3854 0 15.5729 0.0833333 15.7188 0.25ZM14.375 1.59375H9.09375L8.78125 1.90625V4C8.78125 4.4375 8.625 4.8125 8.3125 5.125C8 5.4375 7.625 5.59375 7.1875 5.59375H5.09375L4.78125 5.90625V14.375H14.375V1.59375ZM6.375 8.78125C6.375 8.55208 6.44792 8.35938 6.59375 8.20312C6.73958 8.04688 6.9375 7.96875 7.1875 7.96875H11.9688C12.1979 7.96875 12.3906 8.04688 12.5469 8.20312C12.7031 8.35938 12.7812 8.55208 12.7812 8.78125C12.7812 9.01042 12.7031 9.19792 12.5469 9.34375C12.3906 9.48958 12.1979 9.5625 11.9688 9.5625H7.1875C6.64583 9.5625 6.375 9.30208 6.375 8.78125ZM11.9688 11.1875C12.1979 11.1875 12.3906 11.2656 12.5469 11.4219C12.7031 11.5781 12.7812 11.7604 12.7812 11.9688C12.7812 12.1771 12.7031 12.3646 12.5469 12.5312C12.3906 12.6979 12.1979 12.7812 11.9688 12.7812H7.1875C6.9375 12.7812 6.73958 12.6979 6.59375 12.5312C6.44792 12.3646 6.375 12.1771 6.375 11.9688C6.375 11.7604 6.44792 11.5781 6.59375 11.4219C6.73958 11.2656 6.9375 11.1875 7.1875 11.1875H11.9688ZM5.34375 0.25C5.51042 0.416667 5.59375 0.598958 5.59375 0.796875C5.59375 0.994792 5.51042 1.17708 5.34375 1.34375L1.59375 5.09375V15.1562C1.59375 15.3646 1.52083 15.5521 1.375 15.7188C1.22917 15.8854 1.03125 15.9688 0.78125 15.9688C0.552083 15.9688 0.364583 15.8854 0.21875 15.7188C0.0729167 15.5521 0 15.3646 0 15.1562V4.78125C0 4.55208 0.0833333 4.36458 0.25 4.21875L4.21875 0.25C4.38542 0.0833333 4.57292 0 4.78125 0C4.98958 0 5.17708 0.0833333 5.34375 0.25Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: none; transition: transform .2s"><path d="M9 6l6 6-6 6"/></svg>
+
+</button>
+
+
+
+<div style="padding: 18px 16px 8px; font-size: 10px; letter-spacing: .14em; color: #4A4C55; font-weight: 500">SUPPORT</div>
+
+
+
+
+
+<button class="cp-nav" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.6875 3.46875C15.8958 3.61458 16 3.82292 16 4.09375V7.3125C16 7.83333 15.7292 8.09375 15.1875 8.09375C14.6667 8.09375 14.4062 7.83333 14.4062 7.3125V4.59375C13.8021 4.17708 13.2552 3.89583 12.7656 3.75C12.276 3.60417 11.8125 3.53125 11.375 3.53125C10.8958 3.53125 10.4271 3.60938 9.96875 3.76562C9.51042 3.92188 9.04167 4.14583 8.5625 4.4375V13.2188C8.72917 13.4479 8.72917 13.7396 8.5625 14.0938C8.45833 14.2812 8.29688 14.3958 8.07812 14.4375C7.85938 14.4792 7.65625 14.4375 7.46875 14.3125C6.38542 13.625 5.34375 13.2812 4.34375 13.2812C3.82292 13.2812 3.30208 13.3646 2.78125 13.5312C2.26042 13.6979 1.73958 13.9583 1.21875 14.3125C1.11458 14.3958 0.984375 14.4427 0.828125 14.4531C0.671875 14.4635 0.541667 14.4479 0.4375 14.4062C0.166667 14.2396 0.03125 14 0.03125 13.6875V4.09375C0.03125 3.98958 0.0625 3.86979 0.125 3.73438C0.1875 3.59896 0.260417 3.51042 0.34375 3.46875C0.989583 3.03125 1.64583 2.69271 2.3125 2.45312C2.97917 2.21354 3.67708 2.09375 4.40625 2.09375C5.01042 2.09375 5.60938 2.1875 6.20312 2.375C6.79688 2.5625 7.39583 2.82292 8 3.15625C9.20833 2.44792 10.4062 2.09375 11.5938 2.09375C12.2812 2.09375 12.9635 2.21354 13.6406 2.45312C14.3177 2.69271 15 3.03125 15.6875 3.46875ZM4.25 11.5938C4.6875 11.5938 5.14062 11.651 5.60938 11.7656C6.07812 11.8802 6.53125 12.0417 6.96875 12.25V4.34375C6.07292 3.80208 5.16667 3.53125 4.25 3.53125C3.8125 3.53125 3.35938 3.59896 2.89062 3.73438C2.42188 3.86979 1.94792 4.10417 1.46875 4.4375V12.25C1.90625 12.0417 2.35938 11.8802 2.82812 11.7656C3.29688 11.651 3.77083 11.5938 4.25 11.5938ZM15.2812 12.8125C15.4479 12.8958 15.5677 13.0208 15.6406 13.1875C15.7135 13.3542 15.7292 13.5208 15.6875 13.6875C15.5833 14.1042 15.3125 14.3125 14.875 14.3125H10.0938C9.65625 14.3125 9.38542 14.1042 9.28125 13.6875C9.23958 13.5208 9.25521 13.3542 9.32812 13.1875C9.40104 13.0208 9.52083 12.8958 9.6875 12.8125L11.0312 12.1562C11.3438 12.0104 11.6979 11.9375 12.0938 11.9375H12.9688C13.3646 11.9375 13.7083 12.0104 14 12.1562L15.2812 12.8125ZM12.5625 7.9375C13 7.9375 13.375 8.09375 13.6875 8.40625C14 8.71875 14.1562 9.09375 14.1562 9.53125C14.1562 9.96875 14 10.3438 13.6875 10.6562C13.375 10.9688 13 11.125 12.5625 11.125C12.125 11.125 11.75 10.9688 11.4375 10.6562C11.125 10.3438 10.9688 9.96875 10.9688 9.53125C10.9688 9.09375 11.125 8.71875 11.4375 8.40625C11.75 8.09375 12.125 7.9375 12.5625 7.9375Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+</button>
+
+
+
+
+<button class="cp-nav" style="margin: 2px 6px; padding: 0 10px; height: 38px; border-radius: 3px; display: flex; align-items: center; gap: 10px; background: transparent; color: #1F2024; font-weight: 500">
+
+<span style="width: 18px; display: flex; justify-content: center; color: #666666"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.03125 1.375C3.57292 1.375 3.34375 1.15625 3.34375 0.71875C3.34375 0.260417 3.57292 0.03125 4.03125 0.03125H12C12.4583 0.03125 12.6875 0.260417 12.6875 0.71875C12.6875 1.15625 12.4583 1.375 12 1.375H4.03125ZM12 14.6875C12.4583 14.6875 12.6875 14.9062 12.6875 15.3438C12.6875 15.7812 12.4583 16 12 16H4.03125C3.57292 16 3.34375 15.7812 3.34375 15.3438C3.34375 14.9062 3.57292 14.6875 4.03125 14.6875H12ZM12 2.71875C12.5625 2.71875 13.0365 2.90625 13.4219 3.28125C13.8073 3.65625 14 4.13542 14 4.71875V11.3438C14 11.9271 13.8073 12.4062 13.4219 12.7812C13.0365 13.1562 12.5625 13.3438 12 13.3438H4.03125C3.46875 13.3438 2.99479 13.1562 2.60938 12.7812C2.22396 12.4062 2.03125 11.9271 2.03125 11.3438V4.71875C2.03125 4.13542 2.22396 3.65625 2.60938 3.28125C2.99479 2.90625 3.46875 2.71875 4.03125 2.71875H12ZM12.6875 4.71875C12.6875 4.26042 12.4583 4.03125 12 4.03125H4.03125C3.57292 4.03125 3.34375 4.26042 3.34375 4.71875V11.3438C3.34375 11.8021 3.57292 12.0312 4.03125 12.0312H12C12.4583 12.0312 12.6875 11.8021 12.6875 11.3438V4.71875ZM10.1562 8.6875C10.4896 8.6875 10.7708 8.80208 11 9.03125C11.2292 9.26042 11.3438 9.55208 11.3438 9.90625V10.0312C11.3438 10.2396 11.2812 10.401 11.1562 10.5156C11.0312 10.6302 10.875 10.6875 10.6875 10.6875H5.34375C5.15625 10.6875 5 10.6302 4.875 10.5156C4.75 10.401 4.6875 10.2396 4.6875 10.0312V9.90625C4.6875 9.55208 4.80208 9.26042 5.03125 9.03125C5.26042 8.80208 5.54167 8.6875 5.875 8.6875H10.1562ZM8.03125 5.375C8.38542 5.375 8.69271 5.50521 8.95312 5.76562C9.21354 6.02604 9.34375 6.33333 9.34375 6.6875C9.34375 7.0625 9.21354 7.38021 8.95312 7.64062C8.69271 7.90104 8.38542 8.03125 8.03125 8.03125C7.65625 8.03125 7.33854 7.90104 7.07812 7.64062C6.81771 7.38021 6.6875 7.0625 6.6875 6.6875C6.6875 6.33333 6.81771 6.02604 7.07812 5.76562C7.33854 5.50521 7.65625 5.375 8.03125 5.375Z"/></svg></span>
+
+<span style="flex: 1; padding-left: 0">Lorem ipsum</span>
+
+
+</button>
+
+
+</nav>
+
+
+
+
+<main style="flex: 1; min-width: 0; background: #F5F6F7; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); display: flex; flex-direction: column; overflow: hidden">
+<div style="background: #FFFFFF; padding: 26px 32px 0; flex: none">
+<h1 style="margin: 0 0 18px; font-size: 22px; font-weight: 600">Headline</h1>
+<div role="tablist" style="display: flex; gap: 30px">
+
+<button class="cp-tab" role="tab" aria-selected="true" style="padding: 0 0 10px; font-weight: 600; color: #000099; border-bottom: 2px solid #000099">Lorem ipsum A</button>
+
+<button class="cp-tab" role="tab" aria-selected="false" style="padding: 0 0 10px; font-weight: 500; color: #1F2024; border-bottom: 2px solid transparent">Lorem ipsum B</button>
+
+<button class="cp-tab" role="tab" aria-selected="false" style="padding: 0 0 10px; font-weight: 500; color: #1F2024; border-bottom: 2px solid transparent">Lorem ipsum C</button>
+
+<button class="cp-tab" role="tab" aria-selected="false" style="padding: 0 0 10px; font-weight: 500; color: #1F2024; border-bottom: 2px solid transparent">Lorem ipsum D</button>
+
+</div>
+</div>
+<div data-scroller="1" style="flex: 1; overflow-y: auto; padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 22px; position: relative">
+
+<section data-sec="A" style="display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 24px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 500">Lorem ipsum A</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px">
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+</div>
+</section>
+
+<section data-sec="B" style="display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 24px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 500">Lorem ipsum B</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px">
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+</div>
+</section>
+
+<section data-sec="C" style="display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 24px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 500">Lorem ipsum C</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px">
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+</div>
+</section>
+
+<section data-sec="D" style="display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 24px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 500">Lorem ipsum D</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px">
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+<button class="cp-tile" style="height: 66px; background: #FFFFFF; border: 1px solid #D9D9D9; border-radius: 5px; display: flex; align-items: center; gap: 16px; padding: 0 15px">
+<span style="width: 35px; height: 35px; border-radius: 5px; background: rgba(0,0,153,.08); display: flex; align-items: center; justify-content: center; flex: none">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="12" cy="15" r="2.2"/></svg>
+</span>
+<span style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 600">Tile Name</span>
+<span style="color: #4A4C55">Subtitle</span>
+</span>
+</button>
+
+</div>
+</section>
+
+<div aria-hidden="true" style="height: 420px; flex: none"></div>
+</div>
+</main>
+
+
+
+
+
+
+<div style="flex: none; display: flex; border-radius: 10px 0 0 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); background: #FFFFFF; overflow: hidden">
+
+<section class="cp-panel" aria-label="Help" style="width: 288px; border-right: 1px solid #E4E5E7; display: flex; flex-direction: column; overflow-y: auto">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 10px 14px 16px; flex: none">
+<h2 style="margin: 0; font-size: 15px; font-weight: 600; color: #000099">Help</h2>
+<button class="cp-x" aria-label="Panel schließen" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+</button>
+</div>
+
+
+<div style="padding: 8px 16px 24px; display: flex; flex-direction: column; gap: 14px; line-height: 1.45">
+<h3 style="margin: 4px 0 0; font-size: 15px; font-weight: 600">Lorem ipsum</h3>
+<p style="margin: 0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+<p style="margin: 0">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame.</p>
+<h3 style="margin: 16px 0 0; font-size: 15px; font-weight: 600">Lorem ipsum</h3>
+<p style="margin: 0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px">
+<li>At vero eos et accusam et justo duo dolores et ea rebum.</li>
+<li>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</li>
+<li>Lorem ipsum dolor sit ame.</li>
+</ul>
+<p style="margin: 0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+</div>
+
+
+
+
+
+</section>
+
+
+<aside aria-label="Support" style="width: 62px; display: flex; flex-direction: column; padding: 8px 0">
+<button class="cp-rail" aria-label="Support-Panel umschalten" style="height: 40px; display: flex; align-items: center; justify-content: center">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000099" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="transform: rotate(180deg); transition: transform .25s ease"><path d="M15 6l-6 6 6 6"/></svg>
+</button>
+
+<button class="cp-rail" aria-label="Help" aria-pressed="true" style="height: 70px; display: flex; align-items: center; justify-content: center; position: relative">
+<span aria-hidden="true" style="position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 0 2px 2px 0; background: #000099; transition: background .2s ease"></span>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="15" fill="#000099" stroke="#000099" stroke-width="2" style="transition: fill .2s ease"/><path d="M16 8C17.1042 8 18.1406 8.20833 19.1094 8.625C20.0781 9.04167 20.9271 9.61458 21.6562 10.3438C22.3854 11.0729 22.9583 11.9219 23.375 12.8906C23.7917 13.8594 24 14.8958 24 16C24 17.1042 23.7917 18.1406 23.375 19.1094C22.9583 20.0781 22.3854 20.9271 21.6562 21.6562C20.9271 22.3854 20.0781 22.9583 19.1094 23.375C18.1406 23.7917 17.1042 24 16 24C14.8958 24 13.8594 23.7917 12.8906 23.375C11.9219 22.9583 11.0729 22.3854 10.3438 21.6562C9.61458 20.9271 9.04167 20.0781 8.625 19.1094C8.20833 18.1406 8 17.1042 8 16C8 14.8958 8.20833 13.8594 8.625 12.8906C9.04167 11.9219 9.61458 11.0729 10.3438 10.3438C11.0729 9.61458 11.9219 9.04167 12.8906 8.625C13.8594 8.20833 14.8958 8 16 8ZM17.1875 12.375C17.1875 12.0417 17.0729 11.7552 16.8438 11.5156C16.6146 11.276 16.3333 11.1562 16 11.1562C15.6667 11.1562 15.3854 11.276 15.1562 11.5156C14.9271 11.7552 14.8125 12.0417 14.8125 12.375C14.8125 12.7083 14.9271 12.9896 15.1562 13.2188C15.3854 13.4479 15.6667 13.5625 16 13.5625C16.3333 13.5625 16.6146 13.4479 16.8438 13.2188C17.0729 12.9896 17.1875 12.7083 17.1875 12.375ZM17 15.8125C17 15.5208 16.9062 15.2812 16.7188 15.0938C16.5312 14.9062 16.2917 14.8125 16 14.8125C15.7083 14.8125 15.4688 14.9062 15.2812 15.0938C15.0938 15.2812 15 15.5208 15 15.8125V19.8125C15 20.0833 15.0938 20.3177 15.2812 20.5156C15.4688 20.7135 15.7083 20.8125 16 20.8125C16.2917 20.8125 16.5312 20.7135 16.7188 20.5156C16.9062 20.3177 17 20.0833 17 19.8125V15.8125Z" fill="#FFFFFF"/></svg>
+</button>
+
+<button class="cp-rail" aria-label="Open a support ticket" aria-pressed="false" style="height: 70px; display: flex; align-items: center; justify-content: center; position: relative">
+<span aria-hidden="true" style="position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 0 2px 2px 0; background: transparent; transition: background .2s ease"></span>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="15" fill="#FFFFFF" stroke="#000099" stroke-width="2" style="transition: fill .2s ease"/><path d="M22.3906 10C22.8281 10 23.2031 10.1562 23.5156 10.4688C23.8281 10.7812 23.9844 11.1562 23.9844 11.5938V19.5938C23.9844 20.0312 23.8281 20.4062 23.5156 20.7188C23.2031 21.0312 22.8281 21.1875 22.3906 21.1875H9.64062C9.18229 21.1875 8.79688 21.0312 8.48438 20.7188C8.17188 20.4062 8.01562 20.0312 8.01562 19.5938V11.5938C8.01562 11.1562 8.17188 10.7812 8.48438 10.4688C8.79688 10.1562 9.18229 10 9.64062 10H22.3906ZM22.3906 11.5938H9.64062V19.5938H22.3906V11.5938ZM12.0156 15.5938C11.4948 15.5938 11.2344 15.3229 11.2344 14.7812C11.2344 14.2604 11.4948 14 12.0156 14H16.0156C16.2448 14 16.4375 14.0729 16.5938 14.2188C16.75 14.3646 16.8281 14.5521 16.8281 14.7812C16.8281 15.0312 16.75 15.2292 16.5938 15.375C16.4375 15.5208 16.2448 15.5938 16.0156 15.5938H12.0156ZM20.0156 14.7812C19.474 14.7812 19.2031 14.5208 19.2031 14V13.1875C19.2031 12.6667 19.474 12.4062 20.0156 12.4062H20.7969C21.3385 12.4062 21.6094 12.6667 21.6094 13.1875V14C21.6094 14.5208 21.3385 14.7812 20.7969 14.7812H20.0156ZM12.0156 18C11.7865 18 11.599 17.9219 11.4531 17.7656C11.3073 17.6094 11.2344 17.4167 11.2344 17.1875C11.2344 16.6667 11.4948 16.4062 12.0156 16.4062H14.4219C14.9427 16.4062 15.2031 16.6667 15.2031 17.1875C15.2031 17.4167 15.1302 17.6094 14.9844 17.7656C14.8385 17.9219 14.651 18 14.4219 18H12.0156Z" fill="#000099"/></svg>
+</button>
+
+<button class="cp-rail" aria-label="Favorites" aria-pressed="false" style="height: 70px; display: flex; align-items: center; justify-content: center; position: relative">
+<span aria-hidden="true" style="position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 0 2px 2px 0; background: transparent; transition: background .2s ease"></span>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="15" fill="#FFFFFF" stroke="#000099" stroke-width="2" style="transition: fill .2s ease"/><path d="M18.0313 14.0625C17.9271 14.0208 17.8229 13.9688 17.7188 13.9062C17.6146 13.8438 17.5625 13.7708 17.5625 13.6875L16.0625 10.625L14.5313 13.6875C14.3438 13.9375 14.1354 14.0625 13.9063 14.0625L10.5313 14.5625L12.9375 16.875C13.0208 16.9583 13.0938 17.0677 13.1563 17.2031C13.2188 17.3385 13.2292 17.4688 13.1875 17.5938L12.625 20.9375L14.8438 19.75C15.0104 19.625 15.1979 19.5938 15.4063 19.6562C15.6146 19.7188 15.7708 19.8542 15.875 20.0625C16 20.2708 16.0313 20.4896 15.9688 20.7188C15.9063 20.9479 15.7708 21.1042 15.5625 21.1875L11.9063 23.0938C11.7396 23.1354 11.5781 23.1562 11.4219 23.1562C11.2656 23.1562 11.1354 23.1042 11.0313 23C10.7396 22.8125 10.625 22.5521 10.6875 22.2188L11.5 17.75L8.21876 14.5625C8.03126 14.375 7.97918 14.1042 8.06251 13.75C8.14584 13.4792 8.36459 13.2917 8.71876 13.1875L13.25 12.5625L15.25 8.46875C15.4167 8.15625 15.6563 8 15.9688 8C16.1354 8 16.2761 8.05208 16.3906 8.15625C16.5052 8.26042 16.6042 8.36458 16.6875 8.46875L18.6875 12.5625L23.25 13.1875C23.4167 13.2292 23.5625 13.3125 23.6875 13.4375C23.8125 13.5625 23.875 13.6667 23.875 13.75C23.8958 13.7917 23.9063 13.9062 23.9063 14.0938C23.9063 14.2812 23.8438 14.4375 23.7188 14.5625L22.4375 15.75C22.2708 15.9167 22.0833 16 21.875 16C21.6667 16 21.4792 15.9167 21.3125 15.75C21.1458 15.5833 21.0625 15.3958 21.0625 15.1875C21.0625 14.9792 21.1458 14.7917 21.3125 14.625L21.4063 14.5625L18.0313 14.0625ZM23.1563 19.9688C23.3854 19.9688 23.5781 20.0469 23.7344 20.2031C23.8906 20.3594 23.9688 20.5521 23.9688 20.7812C23.9688 21.0104 23.8906 21.1979 23.7344 21.3438C23.5781 21.4896 23.3854 21.5625 23.1563 21.5625H18.375C17.8333 21.5625 17.5625 21.3021 17.5625 20.7812C17.5625 20.5521 17.6354 20.3594 17.7813 20.2031C17.9271 20.0469 18.125 19.9688 18.375 19.9688H23.1563ZM23.1563 17.5938C23.3854 17.5938 23.5781 17.6667 23.7344 17.8125C23.8906 17.9583 23.9688 18.1458 23.9688 18.375C23.9688 18.625 23.8906 18.8229 23.7344 18.9688C23.5781 19.1146 23.3854 19.1875 23.1563 19.1875H18.375C17.8333 19.1875 17.5625 18.9167 17.5625 18.375C17.5625 17.8542 17.8333 17.5938 18.375 17.5938H23.1563ZM23.1563 22.375C23.3854 22.375 23.5781 22.4479 23.7344 22.5938C23.8906 22.7396 23.9688 22.9375 23.9688 23.1875C23.9688 23.4167 23.8906 23.6042 23.7344 23.75C23.5781 23.8958 23.3854 23.9688 23.1563 23.9688H18.375C17.8333 23.9688 17.5625 23.7083 17.5625 23.1875C17.5625 22.6458 17.8333 22.375 18.375 22.375H23.1563Z" fill="#000099"/></svg>
+</button>
+
+</aside>
+</div>
+</div>
+
+<footer style="height: 46px; flex: none; background: #E4E5E7; display: flex; align-items: center; justify-content: center; gap: 48px; font-size: 12px; font-weight: 500">
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Imprint</a>
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Data Privacy</a>
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Technical Requirements</a>
+<a class="cp-foot" href="#" style="color: #4A4C55; text-decoration: none">Terms of Use</a>
+</footer>
+</div>
+</div></div></foreignObject></svg>
