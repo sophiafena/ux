@@ -3,315 +3,1082 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sophia Lattermann — Portfolio</title>
+  <title>Sophia Lattermann — Designer for interactive products</title>
+  <meta name="description" content="Portfolio of Sophia Lattermann, Senior Designer: product design (UX/UI), motion &amp; graphic design, 3D design and illustration.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sophia Lattermann — Designer for interactive products">
+  <meta property="og:description" content="Product design (UX/UI), motion &amp; graphic design, 3D design and illustration.">
+  <!-- TODO: add a 1200 × 630 px sharing image and the final site URL -->
+  <!-- TODO: add favicon files (favicon.svg + apple-touch-icon.png), then uncomment:
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Shared filter for the grainy gradient orbs: blends the colours, then dissolves the edges into grain -->
+  <svg width="0" height="0" class="svg-defs" aria-hidden="true">
+    <filter id="orbGrain" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="17" result="soft"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="3" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 2.2 -0.55" result="speckle"/>
+      <feComposite in="soft" in2="speckle" operator="arithmetic" k1="1.25" k2="0.3" k3="0" k4="0"/>
+    </filter>
+  </svg>
 
   <!-- Cursor-following blob -->
   <div class="cursor-blob" id="cursorBlob"></div>
 
   <!-- Navigation -->
-  <nav class="nav-wrapper">
+  <nav class="nav-wrapper" aria-label="Main">
     <div class="nav-pill">
-      <a href="#" class="active" data-page="home">Home</a>
-      <a href="#" data-page="projects">Projects</a>
-      <a href="#" data-page="about">About Me</a>
+      <a href="#/" class="nav-home" data-nav="home" aria-label="Sophia Lattermann, home">
+        <span class="nav-name-full" aria-hidden="true">Sophia Lattermann</span>
+        <span class="nav-name-short" aria-hidden="true">SL</span>
+      </a>
+      <a href="#/work" data-nav="work">Work</a>
+      <a href="#/about" data-nav="about">About</a>
     </div>
   </nav>
 
+  <!--
+    Routing (main.js): #/ · #/work · #/work?filter=<category> · #/work/<slug> · #/about · #/impressum · #/datenschutz
+    Categories everywhere: product · motion-graphic · 3d · illustration-art
+  -->
+  <main id="main">
+
   <!-- ==================== HOME ==================== -->
-  <section class="page active" id="page-home">
+  <section class="page active" id="page-home" data-title="Sophia Lattermann — Designer for interactive products">
 
-    <div class="hero">
-      <p class="hero-label">Portfolio</p>
-      <h1 class="hero-name">Sophia<br>Lattermann</h1>
-    </div>
-
-    <!-- Image Carousel -->
-    <div class="carousel-section">
-      <h2>Highlights</h2>
-      <div class="carousel-track-wrapper">
-        <div class="carousel-track">
-
-          <div class="carousel-card card-sm">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&h=600&fit=crop" alt="UI Design">
-            <div class="carousel-card-label">Interface Design</div>
+    <!--
+      Parallax hero: .hero is tall, .hero-stage sticks to the viewport while you scroll through it.
+      Each .parallax-layer is positioned by JS:
+        data-from / data-to  start and end position in % of the stage ("x y")
+        data-depth           parallax strength (vertical scroll speed + mouse movement)
+        data-rotate          rotation in degrees at the end of the scroll
+        data-scale           scale at the end of the scroll
+        --size               layer width (and height)
+      To use a real graphic, replace the .orb inside a layer with e.g.
+        <img src="images/parallax/layer_girl%201.svg" alt="">
+    -->
+    <div class="hero" id="hero">
+      <div class="hero-stage">
+        <div class="parallax-scene" aria-hidden="true">
+          <!--
+            Grainy gradient orbs (placeholders for your graphics).
+            data-colors: four colours from the outer glow to the hot core.
+          -->
+          <!-- Placeholder: girl -->
+          <div class="parallax-layer" style="--size: 60vmin" data-from="80 50" data-to="66 46" data-depth="0.12" data-rotate="25" data-scale="1.2">
+            <div class="orb" data-colors="#63dcff #4a6cff #ff9a3d #ff4b3a"></div>
           </div>
-
-          <div class="carousel-card card-md">
-            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=560&h=680&fit=crop" alt="Motion Graphics">
-            <div class="carousel-card-label">Motion Graphics</div>
+          <!-- Placeholder: palette -->
+          <div class="parallax-layer" style="--size: 34vmin" data-from="14 26" data-to="24 66" data-depth="0.3" data-rotate="-30" data-scale="1.1">
+            <div class="orb" data-colors="#ffc2ad #ff6b5e #ffc94d #ff4b6e"></div>
           </div>
-
-          <div class="carousel-card card-lg">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=640&h=840&fit=crop" alt="3D Art">
-            <div class="carousel-card-label">3D Art &amp; Visualisation</div>
+          <!-- Placeholder: matcha -->
+          <div class="parallax-layer" style="--size: 18vmin" data-from="26 84" data-to="10 46" data-depth="0.5" data-rotate="40">
+            <div class="orb" data-colors="#a6f2e8 #3fc8c0 #6d8cff #ffd66b"></div>
           </div>
-
-          <div class="carousel-card card-md">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=560&h=680&fit=crop" alt="Spatial Design">
-            <div class="carousel-card-label">Spatial Design</div>
+          <!-- Placeholder: controller -->
+          <div class="parallax-layer" style="--size: 11vmin" data-from="62 12" data-to="88 22" data-depth="0.7" data-scale="1.3">
+            <div class="orb" data-colors="#d2c4ff #7b6cff #ff8ab3 #ff6b5e"></div>
           </div>
-
-          <div class="carousel-card card-sm">
-            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=500&h=600&fit=crop" alt="Branding">
-            <div class="carousel-card-label">Branding &amp; Identity</div>
-          </div>
-
-          <div class="carousel-card card-lg">
-            <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=640&h=840&fit=crop" alt="Web Development">
-            <div class="carousel-card-label">Creative Development</div>
-          </div>
-
-          <div class="carousel-card card-sm">
-            <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=500&h=600&fit=crop" alt="Packaging">
-            <div class="carousel-card-label">Packaging Design</div>
-          </div>
-
-          <div class="carousel-card card-md">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=560&h=680&fit=crop" alt="Digital Art">
-            <div class="carousel-card-label">Digital Art</div>
-          </div>
-
         </div>
+
+        <div class="hero-copy">
+          <p class="hero-label">Senior Designer at Deutsche Börse</p>
+          <h1 class="hero-name" tabindex="-1">
+            <span class="hero-name-line"><span>Sophia</span></span>
+            <span class="hero-name-line"><span>Lattermann</span></span>
+          </h1>
+          <p class="hero-tagline">Designer for interactive products: apps, games &amp; websites. Plus print and illustration.</p>
+          <div class="hero-actions">
+            <a href="#/work" class="button button-primary">View work <span aria-hidden="true">→</span></a>
+            <a href="#/about" class="button button-ghost">About me</a>
+          </div>
+        </div>
+
+        <div class="hero-statement" aria-hidden="true">
+          <p>I turn complex ideas into <em>clear</em>, <em>intuitive</em> digital experiences.</p>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true"><span>Scroll</span></div>
       </div>
     </div>
 
-    <!-- Skills -->
-    <div class="skills-section">
-      <h2>What I Do</h2>
-      <div class="skills-grid">
-
-        <div class="skill-card stagger-1">
-          <div class="skill-number">01</div>
-          <h3>UX / UI Design</h3>
-          <p>Crafting intuitive interfaces and seamless user experiences — from research and wireframes to high-fidelity prototypes and design systems.</p>
+    <!-- ==================== SELECTED WORK ==================== -->
+    <section class="home-section selected-work" aria-labelledby="selected-work-title">
+      <div class="section-heading carousel-heading reveal">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2 id="selected-work-title">Projects</h2>
         </div>
-
-        <div class="skill-card stagger-2">
-          <div class="skill-number">02</div>
-          <h3>(Motion) Graphics</h3>
-          <p>Bringing brands to life through motion design, animated visuals and graphic storytelling that captivates and communicates.</p>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-button" data-carousel-prev aria-label="Previous case study">←</button>
+          <button type="button" class="carousel-button" data-carousel-next aria-label="Next case study">→</button>
         </div>
-
-        <div class="skill-card stagger-3">
-          <div class="skill-number">03</div>
-          <h3>3D Design</h3>
-          <p>Modeling, texturing and rendering compelling 3D assets — from product visualisations to abstract art and immersive scenes.</p>
-        </div>
-
-        <div class="skill-card stagger-4">
-          <div class="skill-number">04</div>
-          <h3>Spatial Design</h3>
-          <p>Designing experiences for physical and extended-reality spaces — exhibitions, installations and environments that engage all senses.</p>
-        </div>
-
       </div>
-    </div>
-
-    <!-- Project Grid -->
-    <div class="projects-home">
-      <h2>Selected Work</h2>
-      <div class="project-grid">
-
-        <div class="project-card stagger-1">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23c8b4ff' width='400' height='300'/%3E%3Ccircle cx='200' cy='150' r='60' fill='%23a78bfa' opacity='.6'/%3E%3C/svg%3E" alt="Project 1">
-          <div class="project-card-body">
-            <h3>Brand Identity System</h3>
-            <p>A comprehensive visual identity for a fintech startup — logo, type system, colour palette and guidelines.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-2">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23fbc4d4' width='400' height='300'/%3E%3Crect x='120' y='80' width='160' height='140' rx='20' fill='%23f9a8c9' opacity='.5'/%3E%3C/svg%3E" alt="Project 2">
-          <div class="project-card-body">
-            <h3>Mobile App Redesign</h3>
-            <p>End-to-end UX/UI redesign of a health & wellness app, boosting engagement by 40%.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-3">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23b4e0ff' width='400' height='300'/%3E%3Cellipse cx='200' cy='150' rx='100' ry='50' fill='%2390cbf9' opacity='.5'/%3E%3C/svg%3E" alt="Project 3">
-          <div class="project-card-body">
-            <h3>3D Product Renders</h3>
-            <p>Photorealistic 3D renders for an electronics brand — used in e-commerce and social campaigns.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-4">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23d4f4c4' width='400' height='300'/%3E%3Cpolygon points='200,60 320,240 80,240' fill='%23a3d977' opacity='.5'/%3E%3C/svg%3E" alt="Project 4">
-          <div class="project-card-body">
-            <h3>Exhibition Space</h3>
-            <p>Spatial design for an interactive museum exhibition exploring climate data through immersive visuals.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-5">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23ffe4b4' width='400' height='300'/%3E%3Ccircle cx='150' cy='150' r='80' fill='%23ffc971' opacity='.4'/%3E%3Ccircle cx='250' cy='150' r='50' fill='%23ffb347' opacity='.4'/%3E%3C/svg%3E" alt="Project 5">
-          <div class="project-card-body">
-            <h3>Motion Reel 2026</h3>
-            <p>A curated showreel of motion graphics pieces — title sequences, explainer animations and kinetic typography.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-6">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e0d4f5' width='400' height='300'/%3E%3Crect x='60' y='60' width='280' height='180' rx='12' fill='%23cbb8e8' opacity='.45'/%3E%3C/svg%3E" alt="Project 6">
-          <div class="project-card-body">
-            <h3>Dashboard UI</h3>
-            <p>Data-rich analytics dashboard for a B2B SaaS platform — designed for clarity at every screen size.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-7">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23ffd6d6' width='400' height='300'/%3E%3Ccircle cx='280' cy='100' r='60' fill='%23ffadad' opacity='.5'/%3E%3Ccircle cx='140' cy='200' r='80' fill='%23ff8585' opacity='.3'/%3E%3C/svg%3E" alt="Project 7">
-          <div class="project-card-body">
-            <h3>AR Experience</h3>
-            <p>An augmented-reality activation for a retail brand — blending spatial design with playful 3D interactions.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-8">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23c4e8e0' width='400' height='300'/%3E%3Crect x='100' y='70' width='200' height='160' rx='80' fill='%2394d4c4' opacity='.45'/%3E%3C/svg%3E" alt="Project 8">
-          <div class="project-card-body">
-            <h3>Packaging Design</h3>
-            <p>Sustainable packaging concept for a cosmetics line — minimal, tactile and shelf-ready.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-9">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23d6e4ff' width='400' height='300'/%3E%3Ccircle cx='200' cy='150' r='100' fill='none' stroke='%23a0b8f0' stroke-width='3' opacity='.6'/%3E%3Ccircle cx='200' cy='150' r='50' fill='%23a0b8f0' opacity='.3'/%3E%3C/svg%3E" alt="Project 9">
-          <div class="project-card-body">
-            <h3>Design System</h3>
-            <p>Component library and design tokens for a cross-platform product suite — built for scale and consistency.</p>
-          </div>
-        </div>
-
+      <div class="project-filters home-filters reveal" role="group" aria-label="Filter case studies by discipline">
+        <button class="project-filter" type="button" data-home-filter="all" aria-pressed="true">All</button>
+        <button class="project-filter" type="button" data-home-filter="product" aria-pressed="false">Product Design (UX/UI)</button>
+        <button class="project-filter" type="button" data-home-filter="motion-graphic" aria-pressed="false">Motion &amp; Graphic Design</button>
+        <button class="project-filter" type="button" data-home-filter="3d" aria-pressed="false">3D Design</button>
+        <button class="project-filter" type="button" data-home-filter="illustration-art" aria-pressed="false">Illustration &amp; Art</button>
       </div>
-    </div>
+      <!-- Filled by main.js with every case study (data-featured-line, else data-teaser) -->
+      <div class="case-carousel" data-featured-cards tabindex="0" aria-label="Case studies, scroll horizontally"></div>
+      <div class="section-cta">
+        <a href="#/work" class="button button-ghost">See all work <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
 
-    <div class="footer">&copy; 2026 Sophia Lattermann. All rights reserved.</div>
+    <!-- ==================== PITCH: SKILLS ==================== -->
+    <!--
+      Parallax inside each slide (values are per slide height scrolled):
+        data-speed    vertical drift      data-shift-x  horizontal drift (px)
+        data-tilt     rotation (deg)      data-zoom     shrinks by this amount away from the centre
+    -->
+    <!-- Hidden for now; remove "hidden" to bring the discipline slides back -->
+    <section class="pitch" aria-label="What I do" hidden>
+      <nav class="pitch-progress" aria-label="Disciplines">
+        <button type="button" data-target="skill-product"><span>01</span><span class="pitch-progress-label">Product Design (UX/UI)</span></button>
+        <button type="button" data-target="skill-motion"><span>02</span><span class="pitch-progress-label">Motion &amp; Graphic Design</span></button>
+        <button type="button" data-target="skill-3d"><span>03</span><span class="pitch-progress-label">3D Design</span></button>
+        <button type="button" data-target="skill-art"><span>04</span><span class="pitch-progress-label">Illustration &amp; Art</span></button>
+      </nav>
+
+      <article class="pitch-slide" id="skill-product">
+        <div class="pitch-number" data-speed="-0.45" data-shift-x="140" aria-hidden="true">01</div>
+        <div class="pitch-copy reveal">
+          <p class="pitch-kicker" data-speed="0.04"><span>01</span> Product Design (UX/UI)</p>
+          <h2 data-speed="0.08">Interfaces that make complex products simple</h2>
+          <p class="pitch-lead" data-speed="0.13">Research-driven UX/UI for websites, portals and apps, from the first wireframe to a scalable design system.</p>
+          <ul class="pitch-tags" data-speed="0.18"><li>UX Research</li><li>Information Architecture</li><li>Web &amp; Mobile Apps</li><li>Design Systems</li></ul>
+          <a href="#/work/client-portal" class="pitch-featured" data-speed="0.22">
+            <span class="pitch-featured-label">Featured</span>
+            <span>Client Portal: 7 navigation levels → 2</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#/work?filter=product" class="pitch-see-all" data-speed="0.24">See all Product Design (UX/UI) <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="pitch-visual reveal" data-speed="0.2" data-tilt="-5" data-zoom="0.08">
+          <!-- Placeholder: replace the .orb with your graphic, e.g. <img src="images/skills/skill-product.svg" alt="..."> -->
+          <div class="orb" data-colors="#63dcff #4a6cff #ff9a3d #ff4b3a" data-speed="-0.35" data-shift-x="-40"></div>
+          <figcaption>Illustration coming soon</figcaption>
+        </figure>
+        <div class="pitch-accent" data-speed="0.6" data-shift-x="-80" aria-hidden="true"><div class="orb" data-colors="#ffc2ad #ff6b5e #ffc94d #ff4b6e"></div></div>
+        <div class="pitch-accent pitch-accent-small" data-speed="1" data-shift-x="60" aria-hidden="true"><div class="orb" data-colors="#63dcff #4a6cff #ff9a3d #ff4b3a"></div></div>
+      </article>
+
+      <article class="pitch-slide" id="skill-motion">
+        <div class="pitch-number" data-speed="-0.45" data-shift-x="140" aria-hidden="true">02</div>
+        <div class="pitch-copy reveal">
+          <p class="pitch-kicker" data-speed="0.04"><span>02</span> Motion &amp; Graphic Design</p>
+          <h2 data-speed="0.08">Brands in motion and on paper</h2>
+          <p class="pitch-lead" data-speed="0.13">Animations, explainer videos, campaigns and editorial design for digital and print.</p>
+          <ul class="pitch-tags" data-speed="0.18"><li>Motion Graphics</li><li>Lottie Animation</li><li>Explainer Videos</li><li>Print &amp; Editorial</li></ul>
+          <a href="#/work/berlinale-press-dossier" class="pitch-featured" data-speed="0.22">
+            <span class="pitch-featured-label">Featured</span>
+            <span>Berlinale Press Dossier: 130 pages, two festivals</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#/work?filter=motion-graphic" class="pitch-see-all" data-speed="0.24">See all Motion &amp; Graphic Design <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="pitch-visual reveal" data-speed="0.2" data-tilt="-5" data-zoom="0.08">
+          <!-- Placeholder: replace the .orb with your graphic, e.g. <img src="images/skills/skill-motion.svg" alt="..."> -->
+          <div class="orb" data-colors="#ffc2ad #ff6b5e #ffc94d #ff4b6e" data-speed="-0.35" data-shift-x="-40"></div>
+          <figcaption>Illustration coming soon</figcaption>
+        </figure>
+        <div class="pitch-accent" data-speed="0.6" data-shift-x="-80" aria-hidden="true"><div class="orb" data-colors="#a6f2e8 #3fc8c0 #6d8cff #ffd66b"></div></div>
+        <div class="pitch-accent pitch-accent-small" data-speed="1" data-shift-x="60" aria-hidden="true"><div class="orb" data-colors="#ffc2ad #ff6b5e #ffc94d #ff4b6e"></div></div>
+      </article>
+
+      <article class="pitch-slide" id="skill-3d">
+        <div class="pitch-number" data-speed="-0.45" data-shift-x="140" aria-hidden="true">03</div>
+        <div class="pitch-copy reveal">
+          <p class="pitch-kicker" data-speed="0.04"><span>03</span> 3D Design</p>
+          <h2 data-speed="0.08">Objects and worlds you want to explore</h2>
+          <p class="pitch-lead" data-speed="0.13">Modelled, textured and lit in Blender and 3ds Max: game-ready assets, product visualisations and interactive 3D on the web.</p>
+          <ul class="pitch-tags" data-speed="0.18"><li>Game Assets</li><li>Product Visualisation</li><li>Interactive 3D (Three.js)</li><li>Texturing &amp; Lighting</li></ul>
+          <a href="#/work?filter=3d" class="pitch-featured" data-speed="0.22">
+            <span class="pitch-featured-label">Featured</span>
+            <span>Interactive 3D Website with Three.js</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#/work?filter=3d" class="pitch-see-all" data-speed="0.24">See all 3D Design <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="pitch-visual reveal" data-speed="0.2" data-tilt="-5" data-zoom="0.08">
+          <!-- Placeholder: replace the .orb with your graphic, e.g. <img src="images/skills/skill-3d.svg" alt="..."> -->
+          <div class="orb" data-colors="#a6f2e8 #3fc8c0 #6d8cff #ffd66b" data-speed="-0.35" data-shift-x="-40"></div>
+          <figcaption>Illustration coming soon</figcaption>
+        </figure>
+        <div class="pitch-accent" data-speed="0.6" data-shift-x="-80" aria-hidden="true"><div class="orb" data-colors="#d2c4ff #7b6cff #ff8ab3 #ff6b5e"></div></div>
+        <div class="pitch-accent pitch-accent-small" data-speed="1" data-shift-x="60" aria-hidden="true"><div class="orb" data-colors="#a6f2e8 #3fc8c0 #6d8cff #ffd66b"></div></div>
+      </article>
+
+      <article class="pitch-slide" id="skill-art">
+        <div class="pitch-number" data-speed="-0.45" data-shift-x="140" aria-hidden="true">04</div>
+        <div class="pitch-copy reveal">
+          <p class="pitch-kicker" data-speed="0.04"><span>04</span> Illustration &amp; Art</p>
+          <h2 data-speed="0.08">Illustrations with character, digital and on canvas</h2>
+          <p class="pitch-lead" data-speed="0.13">Illustrations for apps and products, food illustration and surreal acrylic paintings.</p>
+          <ul class="pitch-tags" data-speed="0.18"><li>App Illustrations</li><li>Food Illustration</li><li>Acrylic Painting</li></ul>
+          <a href="#/work/recinote" class="pitch-featured" data-speed="0.22">
+            <span class="pitch-featured-label">Featured</span>
+            <span>ReciNote: illustration system for a mobile app</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#/work?filter=illustration-art" class="pitch-see-all" data-speed="0.24">See all Illustration &amp; Art <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="pitch-visual reveal" data-speed="0.2" data-tilt="-5" data-zoom="0.08">
+          <!-- Placeholder: replace the .orb with your graphic, e.g. <img src="images/skills/skill-art.svg" alt="..."> -->
+          <div class="orb" data-colors="#d2c4ff #7b6cff #ff8ab3 #ff6b5e" data-speed="-0.35" data-shift-x="-40"></div>
+          <figcaption>Illustration coming soon</figcaption>
+        </figure>
+        <div class="pitch-accent" data-speed="0.6" data-shift-x="-80" aria-hidden="true"><div class="orb" data-colors="#63dcff #4a6cff #ff9a3d #ff4b3a"></div></div>
+        <div class="pitch-accent pitch-accent-small" data-speed="1" data-shift-x="60" aria-hidden="true"><div class="orb" data-colors="#d2c4ff #7b6cff #ff8ab3 #ff6b5e"></div></div>
+      </article>
+
+      <article class="pitch-slide pitch-end" id="skill-end">
+        <div class="pitch-end-orb" data-speed="0.2" aria-hidden="true"><div class="orb" data-colors="#63dcff #4a6cff #ff9a3d #ff4b3a"></div></div>
+        <div class="pitch-copy reveal">
+          <p class="pitch-kicker">Work</p>
+          <h2>Curious how it looks in practice?</h2>
+          <p class="pitch-lead">Case studies, illustrations and 3D work, from first idea to final product.</p>
+          <div class="hero-actions">
+            <a href="#/work" class="button button-primary">Explore all work <span aria-hidden="true">→</span></a>
+            <a href="#/about" class="button button-ghost">About me</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== WORKED WITH ==================== -->
+    <section class="home-section worked-with" aria-labelledby="worked-with-title">
+      <h2 id="worked-with-title" class="section-kicker">Worked with</h2>
+      <!-- TODO: replace the names with logos (SVG, monochrome) once approved for use -->
+      <ul class="worked-with-list">
+        <li>Deutsche Börse</li>
+        <li>Eurex</li>
+        <li>Berlinale</li>
+        <li>Theater Regensburg</li>
+        <li>Siemens</li>
+        <li>Bayerischer Rundfunk</li>
+      </ul>
+    </section>
+
+    <!-- ==================== ABOUT TEASER ==================== -->
+    <section class="home-section about-teaser reveal" aria-labelledby="about-teaser-title">
+      <div class="about-teaser-photo media-placeholder" role="img" aria-label="Photo of Sophia Lattermann"></div>
+      <div>
+        <p class="section-kicker">About</p>
+        <h2 id="about-teaser-title">Hi, I'm Sophia.</h2>
+        <p>I'm a multidisciplinary designer based in Bavaria. At Deutsche Börse, I lead end-to-end design for digital products, and outside the office I illustrate, paint and build in 3D.</p>
+        <a href="#/about" class="text-link">More about me <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
   </section>
 
-  <!-- ==================== PROJECTS ==================== -->
-  <section class="page" id="page-projects">
-    <div class="projects-page">
-      <h1>Projects</h1>
-      <p class="subtitle">A deeper look into selected work across UX/UI, motion, 3D and spatial design.</p>
-      <div class="project-filters" role="group" aria-label="Filter projects by discipline">
-        <button class="project-filter" type="button" data-project-filter="product" aria-pressed="false">Product Design</button>
-        <button class="project-filter" type="button" data-project-filter="graphic" aria-pressed="false">(Motion) Graphic Design</button>
-        <button class="project-filter" type="button" data-project-filter="3d" aria-pressed="false">3D Design</button>
+  <!-- ==================== WORK ==================== -->
+  <section class="page" id="page-work" data-title="Work — Sophia Lattermann">
+    <div class="work-page">
+      <h1 tabindex="-1">Work</h1>
+      <p class="subtitle">Product design, motion and editorial work, 3D studies, illustrations and paintings.</p>
+      <div class="project-filters" role="group" aria-label="Filter work by discipline">
+        <button class="project-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="project-filter" type="button" data-filter="product" aria-pressed="false">Product Design (UX/UI)</button>
+        <button class="project-filter" type="button" data-filter="motion-graphic" aria-pressed="false">Motion &amp; Graphic Design</button>
+        <button class="project-filter" type="button" data-filter="3d" aria-pressed="false">3D Design</button>
+        <button class="project-filter" type="button" data-filter="illustration-art" aria-pressed="false">Illustration &amp; Art</button>
       </div>
-      <div class="project-grid">
+      <p class="filter-status" role="status" aria-live="polite"></p>
 
-        <div class="project-card stagger-1" data-category="graphic">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23c8b4ff' width='400' height='300'/%3E%3Ccircle cx='200' cy='150' r='60' fill='%23a78bfa' opacity='.6'/%3E%3C/svg%3E" alt="Project 1">
-          <div class="project-card-body">
-            <h3>Brand Identity System</h3>
-            <p>A comprehensive visual identity for a fintech startup — logo, type system, colour palette and guidelines.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-2" data-category="product">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23fbc4d4' width='400' height='300'/%3E%3Crect x='120' y='80' width='160' height='140' rx='20' fill='%23f9a8c9' opacity='.5'/%3E%3C/svg%3E" alt="Project 2">
-          <div class="project-card-body">
-            <h3>Mobile App Redesign</h3>
-            <p>End-to-end UX/UI redesign of a health & wellness app, boosting engagement by 40%.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-3" data-category="3d">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23b4e0ff' width='400' height='300'/%3E%3Cellipse cx='200' cy='150' rx='100' ry='50' fill='%2390cbf9' opacity='.5'/%3E%3C/svg%3E" alt="Project 3">
-          <div class="project-card-body">
-            <h3>3D Product Renders</h3>
-            <p>Photorealistic 3D renders for an electronics brand — used in e-commerce and social campaigns.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-4" data-category="3d">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23d4f4c4' width='400' height='300'/%3E%3Cpolygon points='200,60 320,240 80,240' fill='%23a3d977' opacity='.5'/%3E%3C/svg%3E" alt="Project 4">
-          <div class="project-card-body">
-            <h3>Exhibition Space</h3>
-            <p>Spatial design for an interactive museum exhibition exploring climate data through immersive visuals.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-5" data-category="graphic">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23ffe4b4' width='400' height='300'/%3E%3Ccircle cx='150' cy='150' r='80' fill='%23ffc971' opacity='.4'/%3E%3Ccircle cx='250' cy='150' r='50' fill='%23ffb347' opacity='.4'/%3E%3C/svg%3E" alt="Project 5">
-          <div class="project-card-body">
-            <h3>Motion Reel 2026</h3>
-            <p>A curated showreel of motion graphics pieces — title sequences, explainer animations and kinetic typography.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-6" data-category="product">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e0d4f5' width='400' height='300'/%3E%3Crect x='60' y='60' width='280' height='180' rx='12' fill='%23cbb8e8' opacity='.45'/%3E%3C/svg%3E" alt="Project 6">
-          <div class="project-card-body">
-            <h3>Dashboard UI</h3>
-            <p>Data-rich analytics dashboard for a B2B SaaS platform — designed for clarity at every screen size.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-7" data-category="3d">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23ffd6d6' width='400' height='300'/%3E%3Ccircle cx='280' cy='100' r='60' fill='%23ffadad' opacity='.5'/%3E%3Ccircle cx='140' cy='200' r='80' fill='%23ff8585' opacity='.3'/%3E%3C/svg%3E" alt="Project 7">
-          <div class="project-card-body">
-            <h3>AR Experience</h3>
-            <p>An augmented-reality activation for a retail brand — blending spatial design with playful 3D interactions.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-8" data-category="graphic">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23c4e8e0' width='400' height='300'/%3E%3Crect x='100' y='70' width='200' height='160' rx='80' fill='%2394d4c4' opacity='.45'/%3E%3C/svg%3E" alt="Project 8">
-          <div class="project-card-body">
-            <h3>Packaging Design</h3>
-            <p>Sustainable packaging concept for a cosmetics line — minimal, tactile and shelf-ready.</p>
-          </div>
-        </div>
-
-        <div class="project-card stagger-9" data-category="product">
-          <img class="project-card-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23d6e4ff' width='400' height='300'/%3E%3Ccircle cx='200' cy='150' r='100' fill='none' stroke='%23a0b8f0' stroke-width='3' opacity='.6'/%3E%3Ccircle cx='200' cy='150' r='50' fill='%23a0b8f0' opacity='.3'/%3E%3C/svg%3E" alt="Project 9">
-          <div class="project-card-body">
-            <h3>Design System</h3>
-            <p>Component library and design tokens for a cross-platform product suite — built for scale and consistency.</p>
-          </div>
-        </div>
-
+      <!-- main.js adds the case-study cards in front of the series cards below (template order). -->
+      <div class="case-grid work-grid" data-case-cards>
+          <!-- Artist portfolio: replace the href with the final URL -->
+          <a class="project-card series-card" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener" data-category="illustration-art 3d">
+            <img class="project-card-img" loading="lazy" src="images/illustration/surreal2.jpg" width="1500" height="2000" alt="Surreal acrylic painting: a clock face with a human face, a crooked tree, a stone staircase and thorny vines">
+            <span class="project-card-body">
+              <span class="case-card-discipline">Illustration &amp; Art · 3D Design</span>
+              <span class="playground-title">Artist Portfolio</span>
+              <span class="playground-meta">Paintings, illustrations and 3D work on my artist website. Opens in a new tab ↗</span>
+            </span>
+          </a>
+          <button class="project-card series-card" type="button" data-category="motion-graphic" data-series="eurex-explainer">
+            <img class="project-card-img" loading="lazy" src="images/Eurex Communication Services Animation Explainer.png" width="804" height="452" alt="Still from the Eurex Communication Services explainer video">
+            <span class="project-card-body">
+              <span class="case-card-discipline">Motion &amp; Graphic Design</span>
+              <span class="playground-title">Eurex Communication Services Explainer</span>
+              <span class="playground-meta">A scripted explainer video for Eurex's information channels.</span>
+            </span>
+          </button>
       </div>
     </div>
-    <div class="footer">&copy; 2026 Sophia Lattermann. All rights reserved.</div>
+  </section>
+
+  <!-- ==================== CASE STUDY (rendered from templates) ==================== -->
+  <section class="page" id="page-case" data-title="Case study — Sophia Lattermann">
+    <article class="case-page" data-case-root></article>
   </section>
 
   <!-- ==================== ABOUT ==================== -->
-  <section class="page" id="page-about">
+  <section class="page" id="page-about" data-title="About — Sophia Lattermann">
     <div class="about-page">
-      <h1>About Me</h1>
+      <h1 tabindex="-1">About</h1>
       <div class="about-content">
-        <div class="about-photo" style="background: linear-gradient(135deg, #c8b4ff 0%, #fbc4d4 50%, #b4e0ff 100%);"></div>
+        <div class="about-photo media-placeholder" role="img" aria-label="Photo of Sophia Lattermann"></div>
         <div class="about-text">
           <h2>Hi, I'm Sophia.</h2>
-          <p>
-            I'm a multidisciplinary designer based in Frankfurt, specialising in UX/UI design, motion graphics, 3D visualisation and spatial design. I love turning complex ideas into clear, compelling visual experiences.
-          </p>
-          <p>
-            My work lives at the intersection of technology and aesthetics — whether it's designing an intuitive interface, animating a brand story, modelling a product in 3D, or shaping a physical space that tells a narrative.
-          </p>
-          <p>
-            I'm always excited to collaborate on projects that push creative boundaries. Let's build something great together.
-          </p>
-          <ul class="contact-list">
-            <li><span>Email</span>sophia.lattermann@outlook.com</li>
-            <li><span>Location</span>Frankfurt am Main, Germany</li>
-            <li><span>Availability</span>Open for freelance &amp; collaboration</li>
-          </ul>
+          <p>I'm a multidisciplinary designer based in Bavaria, working across UX/UI and interaction design, motion graphics, 3D and illustration. I love turning complex ideas into clear, compelling experiences.</p>
+          <p>At Deutsche Börse, I lead end-to-end design for digital products, from user research and prototyping to design systems and multimedia. I work closely with product teams and developers, and I speak their language: HTML, CSS and JavaScript.</p>
+          <!-- TODO: one paragraph on your path from journalism and political science into design. Core message: "I make complex things clear." -->
         </div>
       </div>
     </div>
-    <div class="footer">&copy; 2026 Sophia Lattermann. All rights reserved.</div>
+
+    <section class="about-section" aria-labelledby="how-title">
+      <h2 id="how-title">How I work</h2>
+      <!-- TODO: draft texts, please review and approve -->
+      <ol class="how-steps">
+        <li class="skill-card stagger-1"><span class="skill-number">01</span><h3>Understand</h3><p>I start by listening to users, stakeholders and the data until the real problem is clear.</p></li>
+        <li class="skill-card stagger-2"><span class="skill-number">02</span><h3>Explore</h3><p>I sketch several directions quickly and compare them before polishing any one of them.</p></li>
+        <li class="skill-card stagger-3"><span class="skill-number">03</span><h3>Decide</h3><p>I choose the option that best serves users and the business, and make the reasons visible to the team.</p></li>
+        <li class="skill-card stagger-4"><span class="skill-number">04</span><h3>Deliver</h3><p>I hand over documented components and specs, and stay close until it works in the real product.</p></li>
+      </ol>
+    </section>
+
+    <section class="about-section beyond" aria-labelledby="beyond-title">
+      <div class="beyond-copy">
+        <h2 id="beyond-title">Beyond the screen</h2>
+        <p>Away from product work, I illustrate and paint: digital food studies of colour and texture, and surreal acrylic paintings on canvas.</p>
+        <a href="https://ARTIST-PORTFOLIO-URL" class="text-link" target="_blank" rel="noopener">Visit my artist portfolio <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="beyond-gallery">
+        <a class="beyond-item" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">
+          <img loading="lazy" src="images/illustration/pfirsich.jpg" width="2000" height="1995" alt="Acrylic painting of a peach">
+        </a>
+        <a class="beyond-item" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">
+          <img loading="lazy" src="images/illustration/sushi1.jpg" width="1998" height="2000" alt="Acrylic painting of sushi">
+        </a>
+        <a class="beyond-item" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">
+          <img loading="lazy" src="images/illustration/surreal2.jpg" width="1500" height="2000" alt="Surreal acrylic painting: a clock face with a human face, a crooked tree, a stone staircase and thorny vines">
+        </a>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="disciplines-title">
+      <h2 id="disciplines-title">Disciplines</h2>
+      <div class="skills-grid disciplines-grid">
+        <div class="skill-card stagger-1"><div class="skill-number">01</div><h3>Product Design (UX/UI)</h3><p>Research-driven UX/UI for websites, portals and apps, from the first wireframe to a scalable design system.</p></div>
+        <div class="skill-card stagger-2"><div class="skill-number">02</div><h3>Motion &amp; Graphic Design</h3><p>Animations, explainer videos, campaigns and editorial design for digital and print.</p></div>
+        <div class="skill-card stagger-3"><div class="skill-number">03</div><h3>3D Design</h3><p>Game-ready assets, product visualisations and interactive 3D on the web.</p></div>
+        <div class="skill-card stagger-4"><div class="skill-number">04</div><h3>Illustration &amp; Art</h3><p>Illustrations for apps and products, food illustration and surreal acrylic paintings.</p></div>
+      </div>
+      <p class="disciplines-also">Also: Marketing, Front-end (HTML, CSS, JS)</p>
+      <h3 class="tools-title">Tools</h3>
+      <ul class="software-list">
+        <li><img src="images/logos/figma.svg" width="20" height="20" loading="lazy" alt="" aria-hidden="true"><span>Figma</span></li>
+        <li><img src="images/logos/blender.svg" width="20" height="20" loading="lazy" alt="" aria-hidden="true"><span>Blender</span></li>
+        <li><span>Adobe Creative Cloud</span></li>
+        <li><span>Lottie</span></li>
+        <li><img src="images/logos/jira.svg" width="20" height="20" loading="lazy" alt="" aria-hidden="true"><span>Jira</span></li>
+        <li><span>CoreMedia</span></li>
+        <li><span>HTML · CSS · JavaScript</span></li>
+      </ul>
+    </section>
+
+    <section class="cv-section" aria-labelledby="cv-title">
+      <h2 id="cv-title">Experience</h2>
+      <div class="cv-columns">
+        <section class="cv-group" aria-labelledby="cv-positions-title">
+          <h3 id="cv-positions-title">Positions</h3>
+          <ul class="cv-compact">
+            <li><span class="cv-entry-period">Since Oct 2021</span><strong>Senior Designer (UX/UI &amp; Multimedia)</strong><span>Deutsche Börse AG · Eschborn</span></li>
+            <li><span class="cv-entry-period">2025</span><strong>(Motion) Graphic Designer · Freelance</strong><span>ReciNote mobile app · Regensburg</span></li>
+            <li><span class="cv-entry-period">Apr 2023 – Jul 2024</span><strong>Marketing Advisor · Freelance</strong><span>Theater Regensburg</span></li>
+            <li><span class="cv-entry-period">Feb – Aug 2021</span><strong>Marketing and Communications Manager</strong><span>mb Support GmbH · Regensburg</span></li>
+            <li><span class="cv-entry-period">Jul 2020 – Jan 2021</span><strong>Intern · PR, Communications and Events</strong><span>GIZ GmbH · Eschborn</span></li>
+            <li><span class="cv-entry-period">Feb – Mar 2019 and 2020</span><strong>Press Officer · Graphic Design</strong><span>Berlinale · Berlin</span></li>
+            <li><span class="cv-entry-period">Aug 2019 – Feb 2020</span><strong>Working Student · Communications</strong><span>Siemens AG · Regensburg</span></li>
+          </ul>
+        </section>
+        <section class="cv-group" aria-labelledby="cv-education-title">
+          <h3 id="cv-education-title">Education</h3>
+          <ul class="cv-compact">
+            <li><span class="cv-entry-period">2017 – 2020</span><strong>M.A. Democracy Science</strong><span>University of Regensburg</span></li>
+            <li><span class="cv-entry-period">2013 – 2017</span><strong>B.A. Political Science, Media Studies and History</strong><span>University of Regensburg</span></li>
+          </ul>
+          <h3>Certificates</h3>
+          <ul class="cv-compact">
+            <li><span class="cv-entry-period">2023</span><strong>Professional Certificates in UX Design and UI Design</strong><span>UX Design Institute</span></li>
+            <li><span class="cv-entry-period">2022</span><strong>Professional Certificate in 3D Design</strong><span>Online-Schule für Gestaltung (OfG)</span></li>
+            <li><span class="cv-entry-period">2022</span><strong>Product Management: Transforming Opportunities into Great Products</strong><span>Stanford Center for Professional Development</span></li>
+          </ul>
+        </section>
+      </div>
+      <!-- Add cv.pdf to the project root, then uncomment:
+      <a class="button button-ghost cv-download" href="cv.pdf" download>Download CV (PDF)</a>
+      -->
+    </section>
+
   </section>
 
+  <!-- ==================== LEGAL ==================== -->
+  <section class="page" id="page-impressum" data-title="Impressum — Sophia Lattermann">
+    <div class="legal-page">
+      <h1 tabindex="-1">Impressum</h1>
+      <!-- TODO: legal notice (Angaben gemäß § 5 DDG): name, postal address, contact, VAT ID if applicable. Have it checked. -->
+      <p class="todo-block">TODO: Angaben gemäß § 5 DDG (Name, Anschrift, Kontakt, ggf. USt-IdNr.).</p>
+    </div>
+  </section>
+
+  <section class="page" id="page-datenschutz" data-title="Datenschutz — Sophia Lattermann">
+    <div class="legal-page">
+      <h1 tabindex="-1">Datenschutz</h1>
+      <!-- TODO: privacy policy. Must cover hosting, Google Fonts (loaded from Google servers), and the external links to YouTube and Vimeo. Have it checked. -->
+      <p class="todo-block">TODO: Datenschutzerklärung (Hosting, Google Fonts, Links zu YouTube und Vimeo).</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ==================== FOOTER (all pages) ==================== -->
+  <footer class="site-footer">
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">Artist Portfolio</a>
+      <a href="#/impressum">Impressum</a>
+      <a href="#/datenschutz">Datenschutz</a>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Sophia Lattermann</p>
+  </footer>
+
+  <!-- ==================== CASE STUDIES ==================== -->
+  <!--
+    One template per case study, in Work order. main.js builds the cards (Work + Home) and the case page from them.
+      data-slug, data-title, data-discipline (label), data-categories (filter keys), data-teaser
+      data-card-image / data-card-alt     card image
+      data-card-video                     optional looping video preview for the card (image stays the reduced-motion fallback)
+      data-featured-line                  optional shorter line for the Home "Selected work" carousel (falls back to data-teaser)
+      data-layout                         A = full case study, B = visual case study, C = gallery entry
+    Gallery images (.case-gallery img) open in the lightbox.
+  -->
+
+  <template data-case data-slug="client-portal" data-layout="A"
+    data-title="Client Portal Redesign" data-discipline="Product Design (UX/UI)" data-categories="product"
+    data-teaser="Seven navigation levels down to two." data-featured-line="Seven navigation levels down to two."
+    data-card-image="images/client portal/final/client-portal-01-home.svg" data-card-alt="Redesigned client portal dashboard with side navigation"
+    data-card-video="images/client portal/final/client-portal-showreel.mp4">
+    <dl class="snapshot">
+      <div><dt>Role</dt><dd>Lead UX/UI Designer</dd></div>
+      <div><dt>Scope</dt><dd>Research · Information architecture · UI · Design system · Handoff · Post-launch testing</dd></div>
+      <div><dt>Team</dt><dd>Product management, internal stakeholders (SMEs) and development</dd></div>
+      <div><dt>Tools</dt><dd>Figma</dd></div>
+    </dl>
+    <figure class="case-hero">
+      <video class="case-hero-video" src="images/client portal/final/client-portal-showreel.mp4" width="1408" height="1004" autoplay muted loop playsinline preload="auto" aria-label="Showreel: dashboard, tasks, side menu, tabs and support panel of the client portal"></video>
+    </figure>
+    <div class="case-body">
+      <section class="case-section">
+        <h2>The challenge</h2>
+        <p>Business clients use the portal for their key services, but some of them sat up to seven levels deep in nested tiles, with a full page reload at every step. Client feedback kept naming the same problems: hard to scan, easy to get lost, unclear information.</p>
+        <p><strong>Goal:</strong> every key service within two clicks, with a structure that still works when new services are added.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>Process</h2>
+        <ol class="case-process">
+          <li><strong>Discover</strong><span>Interviews, feedback, benchmark</span></li>
+          <li><strong>Define</strong><span>Card sorting, information architecture</span></li>
+          <li><strong>Ideate</strong><span>Navigation concepts, sketches</span></li>
+          <li><strong>Design</strong><span>Wireframes, UI, prototype</span></li>
+          <li><strong>Deliver</strong><span>Component library, handoff, testing</span></li>
+        </ol>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">01 Discover</span>Understanding how clients work</h2>
+        <p>I interviewed clients and analysed their feedback to map real workflows and where they got stuck. A benchmark of other B2B portals showed which navigation patterns scale to a large number of services.</p>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">02 Define</span>Card sorting for the information architecture</h2>
+        <p>Together with the client-facing team, who know the clients' questions first hand, I ran a card sorting. Participants grouped the portal's content in a way that made sense to them; where most of them agreed, a group became a branch of the navigation. Outliers were reviewed in follow-up conversations.</p>
+        <figure class="case-media case-media-plain"><img loading="lazy" src="images/client portal/IA.png" width="1930" height="961" alt="Card sorting in three steps: individual cards, groups formed by participants, resulting structure with Home, Tasks, Services and Support"></figure>
+        <p class="case-note">Placeholder: the real services are confidential, so the labels shown here are representative.</p>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">03 Ideate</span>Six navigation concepts</h2>
+        <p>Based on the new structure I explored six navigation directions as wireframes and compared them by path length, scannability and how well they scale.</p>
+        <div class="case-gallery">
+          <figure><img loading="lazy" src="images/client portal/Concept Ideation/Concept 3 – Top Mega Menu@1x.png" width="1408" height="1004" alt="Concept: top navigation with a four-level mega menu"><figcaption><strong>Top mega menu.</strong> All levels in cascading columns: fast for experts, overwhelming for everyone else.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/Concept Ideation/Concept 4 – Side Flyout@1x.png" width="1408" height="1004" alt="Concept: side navigation with flyout levels"><figcaption><strong>Side flyout.</strong> The same depth, just moved to the side.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/Concept Ideation/Concept 2 – Cards@1x.png" width="1408" height="1004" alt="Concept: category cards with service counts"><figcaption><strong>Cards.</strong> Clear overview, but one extra page per level.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/Concept Ideation/Concept 7 – Hub &amp; Spoke@1x.png" width="1408" height="1004" alt="Concept: start page as a hub of categories with quick links"><figcaption><strong>Hub &amp; spoke.</strong> A clear starting point, but every task begins on the home page.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/Concept Ideation/Concept 6 – Command Palette@1x.png" width="1408" height="1004" alt="Concept: command palette search across services and tasks"><figcaption><strong>Command palette.</strong> Fast for users who know what they need, no orientation for everyone else.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/Concept Ideation/Concept 1 – Sections@1x.png" width="1408" height="1004" alt="Concept: two-level side menu with sections as tabs and compact tiles"><figcaption><strong>Chosen: sections.</strong> Two-level side menu, the third level as tabs, compact service tiles.</figcaption></figure>
+        </div>
+        <div class="case-split">
+          <figure class="case-media case-media-plain"><img loading="lazy" src="images/client portal/concept sketch transparent.png" width="1101" height="2048" alt="Hand-drawn flow: collapsed menu, opened menu, second level and tab bar"></figure>
+          <div class="case-split-text">
+            <h3>Interaction sketch</h3>
+            <p>One flow from the dashboard to a service.</p>
+            <ol class="case-split-steps">
+              <li><strong>Collapsed menu</strong><span>Icons only, so the dashboard and its widgets get the full width.</span></li>
+              <li><strong>Menu opens</strong><span>Subheadlines group the services; every first-level entry is one click away.</span></li>
+              <li><strong>Second level expands in place</strong><span>No page reload; the path stays visible and highlighted.</span></li>
+              <li><strong>Third level as tabs</strong><span>The service page shows its sections as a tab bar; tiles lead straight into the app.</span></li>
+              <li><strong>Profile menu</strong><span>Language, personal data and logout, top right.</span></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">04 Design</span>From wireframe to interface</h2>
+        <p>Low-fidelity wireframes fixed the layout of every page type before any visual design. I validated them in a clickable prototype and then built the high-fidelity interface on top.</p>
+        <div class="case-gallery">
+          <figure><img loading="lazy" src="images/client portal/lwo fidelty concept wireframe 1.png" width="1280" height="910" alt="Low-fidelity dashboard with side menu, widget area and support rail"><figcaption>Dashboard: menu, widget area and a support rail on the right.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/lwo fidelty concept wireframe 2.png" width="1280" height="910" alt="Low-fidelity service page with expanded menu, tab bar and grouped tiles"><figcaption>Service page: second level in the menu, third level as tabs, tiles grouped by section.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/lwo fidelty concept wireframe 3.png" width="1280" height="910" alt="Low-fidelity service page with the favorites panel open"><figcaption>Support panel (favorites) opens beside the content instead of covering it.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/lwo fidelty concept wireframe 4.png" width="1280" height="910" alt="Low-fidelity service page with the help panel open"><figcaption>Support panel (help): context for the current page.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <h2>The solution</h2>
+        <ul>
+          <li><strong>A dashboard per user.</strong> Messages, tasks, tickets and favorites on one page, customizable widget by widget.</li>
+          <li><strong>Two levels and a tab bar.</strong> Services expand in place in the side menu; deeper content sits in tabs instead of new pages.</li>
+          <li><strong>Support in context.</strong> Help, tickets and favorites open in a side panel without leaving the current task.</li>
+        </ul>
+        <div class="case-gallery case-gallery-screens">
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-01-home.svg" width="1408" height="1004" alt="Dashboard with messages, tasks, tickets and favorites"><figcaption>Home: the personal dashboard.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-09-menu-collapsed.svg" width="1408" height="1004" alt="Dashboard with the side menu collapsed"><figcaption>Collapsed menu: the content gets the full width.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-04-tasks.svg" width="1408" height="1004" alt="Task list with filters and an empty detail area"><figcaption>Tasks: one list, filtered by status.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-05-task-detail.svg" width="1408" height="1004" alt="Task list next to the selected task detail"><figcaption>Selected task: details open next to the list, no page reload.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-03-overview-tabs.svg" width="1408" height="1004" alt="Service overview with expanded side menu, tab A active"><figcaption>Service overview: second level in the menu, third level as tabs.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-10-overview-tab-c.svg" width="1408" height="1004" alt="Service overview with tab C active"><figcaption>A tab jumps straight to its group of services.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-11-overview-support-help.svg" width="1408" height="1004" alt="Help panel open next to the service overview"><figcaption>Support panel: help for the current page.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-12-overview-support-ticket.svg" width="1408" height="1004" alt="Ticket form open next to the service overview"><figcaption>Support panel: open a ticket without leaving the page.</figcaption></figure>
+          <figure><img loading="lazy" src="images/client portal/final/client-portal-13-overview-support-favorites.svg" width="1408" height="1004" alt="Favorites panel open next to the service overview"><figcaption>Support panel: save the service as a favorite.</figcaption></figure>
+        </div>
+
+        <h3 class="case-subheading">Responsive design</h3>
+        <p>On mobile, the side menu moves behind a burger icon and the tab bar collapses into a dropdown, so the same two levels and tabs work on a small screen. I took the mobile layout from low-fidelity wireframes to the high-fidelity interface.</p>
+        <div class="case-gallery case-gallery-single">
+          <figure><img loading="lazy" src="images/client portal/mobile low fidelity to high fidelity.png" width="1280" height="405" alt="Six mobile screens: three low-fidelity wireframes with the collapsed tab bar, the open dropdown and the open menu, then the same three states in high fidelity"><figcaption>Low fidelity (left) to high fidelity (right): page, tab dropdown and menu.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">05 Deliver</span>A component library for every new service</h2>
+        <p>I built a Figma UI component library for the portal: navigation, tab bar, tiles, widgets and support panel, each with documented variants and states. With it, the team can mock up a new service design in a short time instead of starting from scratch, and development gets consistent building blocks.</p>
+        <p>Development received the interactive prototype with specifications. After implementation I tested the navigation again in the live product.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Key services moved from up to 7 levels to 2.</li>
+          <li>New services are designed from the component library instead of from scratch.</li>
+        </ul>
+      </section>
+
+  </template>
+
+  <template data-case data-slug="client-portal-front-door" data-layout="A"
+    data-title="Client Portal Front Door" data-discipline="Product Design (UX/UI)" data-categories="product"
+    data-teaser="A trustworthy first impression, secured by two-factor authentication."
+    data-card-image="images/member section landing page and login/finalscreens/member-section-01-landing.png" data-card-alt="Member Section landing page with log in and registration"
+    data-card-video="images/member section landing page and login/member-section-v2-desktop-scroll.mp4">
+    <dl class="snapshot">
+      <div><dt>Role</dt><dd>Lead UX/UI Designer</dd></div>
+      <div><dt>Scope</dt><dd>Content audit · Competitive analysis · User flows · Wireframes · UI · Prototype · Handoff</dd></div>
+      <div><dt>Team</dt><dd>Product management · Internal stakeholders · Development</dd></div>
+      <div><dt>Tools</dt><dd>Figma</dd></div>
+    </dl>
+    <figure class="case-hero">
+      <video class="case-hero-video" src="images/member section landing page and login/member-section-v2-desktop-scroll.mp4" width="1408" height="1004" autoplay muted loop playsinline preload="auto" aria-label="Scroll through the Member Section landing page: header with log in and registration, service cards, covered entities and support tiles"></video>
+    </figure>
+    <div class="case-body">
+      <section class="case-section">
+        <h2>The challenge</h2>
+        <p>Every client enters the portal through the same three screens: the landing page, the login and the registration. All three looked outdated. For a leading financial institution, that undermines trust before anyone has logged in.</p>
+        <p>The login also had no two-factor authentication, so accounts were missing an essential layer of security. Registration was one long, inconsistent form, which created friction and likely drop-offs.</p>
+        <p><strong>Goal:</strong> a modern, secure entry point that gets clients from the landing page into the portal without friction, with 2FA built in.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>Process</h2>
+        <ol class="case-process">
+          <li><strong>Discover</strong><span>Content audit, support logs, stakeholder feedback</span></li>
+          <li><strong>Benchmark</strong><span>Financial institutions, FinTech and B2B portals</span></li>
+          <li><strong>Define</strong><span>User flow mapping, information architecture</span></li>
+          <li><strong>Design</strong><span>Wireframes, UI, interactive prototype</span></li>
+          <li><strong>Deliver</strong><span>Component library, specifications, handoff</span></li>
+        </ol>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">01 Discover</span>What clients need before logging in</h2>
+        <p>I analysed support logs and stakeholder feedback to find what clients actually look for on the landing page. That narrowed the content down to a short list of must-haves and kept the page focused. For login and registration I mapped the existing flows step by step to find each friction point and every step that wasn't needed.</p>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">02 Benchmark</span>The visual language of trust</h2>
+        <p>I reviewed leading financial institutions, FinTech portals and B2B platforms. The benchmark showed which patterns are standard for secure login and onboarding, and where the portal could stand out.</p>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">03 Define</span>Structure before visuals</h2>
+        <p>Low-fidelity wireframes set the information architecture. On the landing page, login and registration actions sit where the eye lands first. For registration I proposed a new flow that splits one long form into short, logical steps.</p>
+        <!-- TODO: wireframes / user flow images -->
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">04 Design</span>From wireframe to interface</h2>
+        <p>I built the high-fidelity interface on the existing Deutsche Börse brand identity, with generous white space, high contrast and legible type for every client group. An interactive prototype covered the whole journey from landing page to login. I used it to test the support tiles and the transitions and to collect stakeholder feedback before development started.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>The solution</h2>
+        <div class="case-split">
+          <figure class="case-media case-media-plain"><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-landing-full.png" width="1920" height="3494" alt="Full landing page: header with log in and register, service cards, covered entities and support tiles"></figure>
+          <div class="case-split-text">
+            <h3>Landing page</h3>
+            <ol class="case-split-steps">
+              <li><strong>Clean header</strong><span>Fewer navigation items and one clear call to action: existing clients log in, new clients register.</span></li>
+              <li><strong>Service overview</strong><span>Modular cards with custom icons and short headers replace dense paragraphs.</span></li>
+              <li><strong>Covered entities</strong><span>A grid of logos and tags shows which entity types the portal supports, so clients can see it handles complex, multi-entity structures.</span></li>
+              <li><strong>Support tiles</strong><span>Triage for access problems, so no one gets stuck outside.</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <h3 class="case-subheading">Login &amp; registration</h3>
+        <ul>
+          <li><strong>One input component.</strong> Every field in every flow follows the same design and interaction rules.</li>
+          <li><strong>Secure login with 2FA.</strong> A focused login screen where the extra security step feels like part of the flow, not a technical hurdle.</li>
+          <li><strong>Registration in steps.</strong> One long form became four short steps: Enter credentials → Verify code → Set password → Log in.</li>
+          <li><strong>Password recovery.</strong> The same guided steps as registration, so users only need to learn one pattern.</li>
+        </ul>
+        <div class="case-gallery case-gallery-screens">
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-02-login.png" width="1408" height="1004" alt="Login screen with username and password"><figcaption>Login: one focused form.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-03-authentication.png" width="1408" height="1004" alt="Two-factor authentication screen asking for a verification code"><figcaption>2FA: the code step is part of the flow, not a detour.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-04-registration-email.png" width="1408" height="1004" alt="Registration step 1: company email address"><figcaption>Registration step 1: company email.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-05-registration-email-error.png" width="1408" height="1004" alt="Registration step 1 with an inline error on the email field"><figcaption>Inline error right at the field.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-06-registration-verification.png" width="1408" height="1004" alt="Registration step 2: verification code"><figcaption>Step 2: verify the code sent by email.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-07-registration-verification-error.png" width="1408" height="1004" alt="Registration step 2 with an inline error for a wrong code"><figcaption>Wrong code: clear message, request a new one.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-08-registration-password.png" width="1408" height="1004" alt="Registration step 3: set a password with rules listed below"><figcaption>Step 3: the password rules are visible up front.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-09-registration-password-partial.png" width="1408" height="1004" alt="Password rules partly met while typing"><figcaption>Rules tick off while typing.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-10-registration-password-valid.png" width="1408" height="1004" alt="All password rules met, continue enabled"><figcaption>All rules met: continue unlocks.</figcaption></figure>
+          <figure><img loading="lazy" src="images/member section landing page and login/finalscreens/member-section-11-registration-complete.png" width="1408" height="1004" alt="Registration complete with a button to log in"><figcaption>Done: one click to log in.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <h2><span class="case-phase">05 Deliver</span>Built as designed</h2>
+        <p>Development received a full handoff package: a documented component library, specifications for spacing and typography, every interaction state, and optimised SVG assets.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>Impact</h2>
+        <ul>
+          <li>Two-factor authentication added to the login.</li>
+          <li>Registration in four guided steps instead of one long form, expected to raise completion rates and reduce errors.</li>
+          <li>One consistent entry point across landing page, login, registration and recovery, all in line with the Deutsche Börse brand.</li>
+        </ul>
+      </section>
+    </div>
+  </template>
+
+  <template data-case data-slug="company-admission" data-layout="A"
+    data-title="Company Admission Tool" data-discipline="Product Design (UX/UI)" data-categories="product"
+    data-teaser="A dense onboarding tool made easy to scan."
+    data-card-image="images/admission tool/Previewbild@1x.png" data-card-alt="Redesigned dashboard of the Company Admission Tool"
+    data-card-video="images/admission tool/dashboard-animation.mp4">
+    <dl class="snapshot">
+      <div><dt>Role</dt><dd>Lead UX/UI Designer</dd></div>
+      <div><dt>Users</dt><dd>External Clearing Members · internal Onboarding and Key Account Managers</dd></div>
+      <div><dt>Scope</dt><dd>Workflow mapping · Wireframes · UI strategy · Component library · Handoff</dd></div>
+      <div><dt>Tools</dt><dd>Figma</dd></div>
+    </dl>
+    <figure class="case-hero">
+      <video class="case-hero-video" src="images/admission tool/dashboard-animation.mp4" width="1440" height="1024" autoplay muted loop playsinline preload="auto" aria-label="Animation of the redesigned Company Admission Tool dashboard"></video>
+    </figure>
+    <div class="case-body">
+      <section class="case-section">
+        <h2>The challenge</h2>
+        <p>The tool handles onboarding and segregation changes for external members and internal teams. Its dated, low-contrast interface made dense information hard to read, and important workflows were hidden in complex menus.</p>
+      </section>
+      <section class="case-section">
+        <h2>My role</h2>
+        <p>I led the end-to-end redesign together with product managers and developers, balancing user needs with technical constraints.</p>
+      </section>
+      <section class="case-section">
+        <h2>Process</h2>
+        <ol class="case-steps">
+          <li><strong>Map.</strong> I documented features, structure and user workflows as the basis for the redesign.</li>
+          <li><strong>Explore.</strong> Low-fidelity wireframes tested dashboard, menu and component behaviour before any visual design.</li>
+          <li><strong>Systematise.</strong> I defined a UI strategy built on clear hierarchy, sufficient contrast and reusable components.</li>
+        </ol>
+      </section>
+      <section class="case-section">
+        <h2>The redesign</h2>
+        <p>A calm background, a considered colour palette and consistent components give structure to the dashboard, tables, cards, navigation, pop-ups and notifications. A Figma library with hover, active and disabled states became the shared reference for design and development.</p>
+        <figure class="case-media case-media-plain"><img loading="lazy" src="images/admission tool/01 · Dashboard@1x.png" width="1440" height="2015" alt="Full dashboard of the redesigned Company Admission Tool"><figcaption>Dashboard: the full page.</figcaption></figure>
+        <div class="case-gallery case-gallery-screens">
+          <figure><img loading="lazy" src="images/admission tool/02 · Table Overview@1x.png" width="1440" height="1024" alt="Overview table with search, export, sortable columns and admission status tags"><figcaption>Table overview: dense data, easy to scan with sortable columns and status tags.</figcaption></figure>
+          <figure><img loading="lazy" src="images/admission tool/03 · Create Request Modal@1x.png" width="1440" height="1024" alt="Create new request modal with market and participant selection over the request table"><figcaption>New request: a short modal over the table, so users keep their context.</figcaption></figure>
+          <figure><img loading="lazy" src="images/admission tool/04 · Selection List@1x.png" width="1440" height="1024" alt="Assign new capacity: list of available capacities with add buttons and a breadcrumb"><figcaption>Assign a capacity: one list, one action per row, the breadcrumb shows the step.</figcaption></figure>
+          <figure><img loading="lazy" src="images/admission tool/05 · Form Setup@1x.png" width="1440" height="1024" alt="Capacity setup form with name, currency and a clearing-only toggle"><figcaption>Form setup: review the capacity, set clearing only, confirm.</figcaption></figure>
+        </div>
+      </section>
+      <section class="case-section">
+        <h2>Handoff and expected impact</h2>
+        <p>I prepared detailed specifications and supported developers throughout implementation.</p>
+        <ul>
+          <li>Key information is faster to scan</li>
+          <li>More consistent workflows for internal and external users</li>
+          <li>A scalable base for future features</li>
+        </ul>
+      </section>
+    </div>
+  </template>
+
+  <template data-case data-slug="eurex-ai-support" data-layout="A"
+    data-title="AI-Powered Support Website" data-discipline="Product Design (UX/UI)" data-categories="product"
+    data-teaser="From searching documents to getting answers." data-featured-line="From searching documents to getting answers."
+    data-card-image="images/ai support website/AI website preview.png" data-card-alt="Support landing page with a prominent search bar and chatbot">
+    <dl class="snapshot">
+      <div><dt>Role</dt><dd>Lead Designer</dd></div>
+      <div><dt>Scope</dt><dd>Product vision · Conversational UX · Prototyping · UI</dd></div>
+      <div><dt>Collaboration</dt><dd>AI specialists · Developers</dd></div>
+      <div><dt>Tools</dt><dd>Figma</dd></div>
+    </dl>
+    <figure class="case-hero">
+      <img src="images/ai support website/AI website preview.png" width="1024" height="768" alt="Support landing page with a prominent search bar, topic navigation and chatbot">
+    </figure>
+    <div class="case-body">
+      <section class="case-section">
+        <h2>The challenge</h2>
+        <p>Client and project are confidential and not public, so names and details are kept general here.</p>
+        <p>Clients of a financial services provider could find the right documents in its support section, but they still had to read them to get their answer. Users now expect conversational interfaces and instant results, not lists of links.</p>
+      </section>
+      <section class="case-section">
+        <h2>My role</h2>
+        <p>As product owner, I defined the vision and led the design, aligning AI specialists on capabilities and developers on feasibility.</p>
+      </section>
+      <section class="case-section">
+        <h2>Process</h2>
+        <ol class="case-steps">
+          <li><strong>Set the vision.</strong> A deliberately reduced, search-centric product with the search bar as the hero.</li>
+          <li><strong>Design the conversation.</strong> Flows for search and chatbot, including fallbacks for when the AI has no clear answer. This is a key trust decision.</li>
+          <li><strong>Prototype end to end.</strong> Interactive hi-fi prototypes covering the question, the AI-summarised answer and the drill-down to the source document, so every answer stays traceable.</li>
+        </ol>
+      </section>
+      <section class="case-section">
+        <h2>The solution</h2>
+        <div class="case-split">
+          <figure class="case-media case-media-plain"><img loading="lazy" src="images/ai support website/AI website full.png" width="2196" height="4301" alt="Full support landing page: hero with search bar, topic tiles, most relevant topics, chatbot button and latest publications"></figure>
+          <div class="case-split-text">
+            <h3>Landing page</h3>
+            <ol class="case-split-steps">
+              <li><strong>Search first</strong><span>One prominent search bar in the hero. Users ask their question instead of browsing a menu.</span></li>
+              <li><strong>Topic tiles</strong><span>Seven entry points such as releases, calendars and circulars as a second path for users who prefer to browse.</span></li>
+              <li><strong>Most relevant topics</strong><span>The most-clicked topics per category give a starting point to users who don't know the right keyword.</span></li>
+              <li><strong>AI chatbot</strong><span>Always one click away. It guides users through complex questions and links every answer to its source document.</span></li>
+              <li><strong>Latest publications</strong><span>A compact teaser carousel surfaces news without crowding the page.</span></li>
+            </ol>
+          </div>
+        </div>
+        <h3 class="case-subheading">Chatbot flow</h3>
+        <div class="case-gallery case-gallery-cols-3">
+          <figure><img loading="lazy" src="images/ai support website/1.png" width="522" height="921" alt="AI assistant chat, step 1"></figure>
+          <figure><img loading="lazy" src="images/ai support website/2.png" width="522" height="921" alt="AI assistant chat, step 2"></figure>
+          <figure><img loading="lazy" src="images/ai support website/3.png" width="522" height="921" alt="AI assistant chat, step 3"></figure>
+          <figure><img loading="lazy" src="images/ai support website/4.png" width="522" height="921" alt="AI assistant chat, step 4"></figure>
+          <figure><img loading="lazy" src="images/ai support website/5.png" width="522" height="921" alt="AI assistant chat, step 5"></figure>
+          <figure><img loading="lazy" src="images/ai support website/6.png" width="522" height="921" alt="AI assistant chat, step 6"></figure>
+        </div>
+      </section>
+      <section class="case-section">
+        <h2>Expected impact</h2>
+        <ul>
+          <li>Answers in seconds instead of document reading</li>
+          <li>24/7 support that relieves the human support team</li>
+          <li>A platform that improves as the knowledge base grows</li>
+        </ul>
+      </section>
+    </div>
+  </template>
+
+  <template data-case data-slug="recinote" data-layout="B"
+    data-title="ReciNote Mobile App Graphics&Assets" data-discipline="Motion &amp; Graphic Design" data-categories="motion-graphic illustration-art"
+    data-teaser="One visual language for a recipe app, from illustration to app store." data-featured-line="One visual language, from illustration to app store."
+    data-card-image="images/recinote/recinote-preview.svg" data-card-alt="ReciNote loading animation, illustrations and App Store slides">
+    <dl class="snapshot">
+      <div><dt>Client</dt><dd>ReciNote mobile app (freelance)</dd></div>
+      <div><dt>Year</dt><dd>2025</dd></div>
+      <div><dt>Role</dt><dd>Illustrator · Motion &amp; Graphic Designer</dd></div>
+      <div><dt>Deliverables</dt><dd>Illustration system · UI overlays · Lottie loading animation · 10 store slides</dd></div>
+    </dl>
+    <figure class="case-hero">
+      <img src="images/recinote/recinote-preview.svg" width="1600" height="1200" alt="ReciNote loading animation, illustrations and App Store slides">
+    </figure>
+    <div class="case-body">
+      <section class="case-section">
+        <h2>Brief</h2>
+        <p>The app's graphics came in mixed styles and didn't match the brand, and its store pages used generic stock-style visuals. ReciNote needed one consistent visual identity across the app and its storefronts.</p>
+      </section>
+      <section class="case-section">
+        <h2>Approach</h2>
+        <p>I started with the system rather than single images: a shared style for line, colour and shape, documented as a reusable library. Every later asset (animation, overlays and store slides) builds on it.</p>
+      </section>
+      <section class="case-section">
+        <h2>01 · In-app illustrations</h2>
+        <p>Before and after: the same screens with the old mixed graphics and with the new illustration system.</p>
+        <div class="case-gallery case-gallery-cols-4">
+          <figure><img loading="lazy" src="images/recinote/grafik davor 1.png" width="1300" height="2824" alt="Shopping list screen with the old graphics"><figcaption><strong>Before:</strong> shopping lists with mixed, off-brand graphics.</figcaption></figure>
+          <figure><img loading="lazy" src="images/recinote/new graphic in app 1.svg" width="651" height="1414" alt="Shopping list screen with the new illustration"><figcaption><strong>After:</strong> one illustration style that matches the brand.</figcaption></figure>
+          <figure><img loading="lazy" src="images/recinote/grafik davor 2.png" width="2598" height="5646" alt="Recipe screen with the old graphics"><figcaption><strong>Before:</strong> recipes.</figcaption></figure>
+          <figure><img loading="lazy" src="images/recinote/new graphic in app 2.svg" width="651" height="1413" alt="Recipe screen with the new illustration"><figcaption><strong>After:</strong> recipes.</figcaption></figure>
+        </div>
+        <div class="case-gallery">
+          <figure><img loading="lazy" src="images/recinote/01_Grafik Einkäufe mit HG.svg" width="630" height="630" alt="Illustration of a shopping bag with vegetables"><figcaption>Illustration: shopping lists.</figcaption></figure>
+          <figure><img loading="lazy" src="images/recinote/02_Grafik Rezepte mit HG.svg" width="640" height="640" alt="Illustration of a pot with ingredients"><figcaption>Illustration: recipes.</figcaption></figure>
+        </div>
+      </section>
+      <section class="case-section">
+        <h2>02 · Loading animation</h2>
+        <p>A Lottie animation for app launch: a playful first impression that stays lightweight and doesn't slow the app down.</p>
+        <figure class="case-media case-media-narrow">
+          <!-- TODO: embed the Lottie file (e.g. images/recinote/loading-animation.json) -->
+          <img loading="lazy" src="images/ReciNote Animation.svg" width="680" height="878" alt="ReciNote loading animation">
+        </figure>
+      </section>
+      <section class="case-section">
+        <h2>03 · Play Store &amp; App Store slides</h2>
+        <p>Story-driven slides: each one pairs a headline, a single benefit and a clean UI mockup.</p>
+        <h3 class="case-subheading">Play Store slides (Android)</h3>
+        <div class="case-gallery case-gallery-cols-6">
+
+          <figure><img loading="lazy" src="images/recinote/9.svg" width="1080" height="1920" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/10.svg" width="1080" height="1920" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/11.svg" width="1080" height="1920" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/12.svg" width="1080" height="1920" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/6.svg" width="1080" height="1920" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/8.svg" width="1080" height="1920" alt="ReciNote store slide"></figure>
+        </div>
+        <h3 class="case-subheading">App Store slides (iOS)</h3>
+        <div class="case-gallery case-gallery-cols-4">
+          <figure><img loading="lazy" src="images/recinote/16.svg" width="1290" height="2796" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/15.svg" width="1290" height="2796" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/14.svg" width="1290" height="2796" alt="ReciNote store slide"></figure>
+          <figure><img loading="lazy" src="images/recinote/13.svg" width="1290" height="2796" alt="ReciNote store slide"></figure>
+        </div>
+      </section>
+      <section class="case-section">
+        <h2>Result</h2>
+        <p>A coherent, recognisable brand inside and outside the app, plus an illustration library the team can keep extending.</p>
+      </section>
+    </div>
+  </template>
+
+  <template data-case data-slug="theater-regensburg" data-layout="B"
+    data-title="Theater Regensburg" data-discipline="Motion &amp; Graphic Design" data-categories="motion-graphic"
+    data-teaser="Print and social campaigns for city theatre Regensburg."
+    data-card-image="images/theater regensburg/theater-preview.svg" data-card-alt="Theater Regensburg postcards, social media posts and window posters">
+    <dl class="snapshot">
+      <div><dt>Role</dt><dd>Marketing Advisor &amp; Designer (freelance)</dd></div>
+      <div><dt>Period</dt><dd>April 2023 – July 2024</dd></div>
+      <div><dt>Formats</dt><dd>Postcards · Leporello · Flyers · Magazine ads · Window posters · Social media</dd></div>
+      <div><dt>Tools</dt><dd>Adobe Photoshop · Adobe InDesign · Adobe Premiere Pro</dd></div>
+    </dl>
+    <figure class="case-hero">
+      <img src="images/theater regensburg/theater-preview.svg" width="1600" height="1200" alt="Theater Regensburg postcards, social media posts and window posters">
+    </figure>
+    <div class="case-body">
+      <section class="case-section">
+        <h2>Brief</h2>
+        <p>The theatre needed a steady stream of on-brand material to promote events across all its venues, in print and on social media.</p>
+      </section>
+      <section class="case-section">
+        <h2>Approach</h2>
+        <p>I designed recurring formats rather than one-off pieces, so every month and every event could be produced quickly within the theatre's brand. I also helped refine the design language and content strategy.</p>
+      </section>
+      <section class="case-section">
+        <h2>Work</h2>
+        <h3 class="case-subheading">Monitor displays</h3>
+        <p>Event graphics for the monitors in the theatre foyers and box office.</p>
+        <div class="case-gallery ">
+          <figure><img loading="lazy" src="images/theater regensburg/20231217_3.Kako.jpg" width="1920" height="1080" alt="Monitor display for the chamber concert Abendstern"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/20240203_Valuschka.jpg" width="1920" height="1080" alt="Monitor display for Valuschka"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/20240211_Peter Pan mit Bild.jpg" width="1920" height="1080" alt="Monitor display for Peter Pan"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/20240215_Zauberhaft.jpg" width="1920" height="1080" alt="Monitor display for Zauberhaft"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/20240331_Transit.jpg" width="1920" height="1080" alt="Monitor display for Transit"></figure>
+        </div>
+        <h3 class="case-subheading">Postcards</h3>
+        <p>One postcard per production, front and back, distributed in cafés and bars across the city.</p>
+        <div class="case-gallery case-gallery-cols-4">
+          <figure><img loading="lazy" src="images/theater regensburg/As_One_Foto_VS.png" width="620" height="874" alt="Postcard front for As One"><figcaption><strong>As One</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/As One_RS_v2.png" width="620" height="874" alt="Postcard back for As One"><figcaption>Back</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/DerPrinzvonSchiras_VS_Foto.png" width="620" height="874" alt="Postcard front for Der Prinz von Schiras"><figcaption><strong>Der Prinz von Schiras</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/Der Prinz von Schiras_RS.png" width="620" height="874" alt="Postcard back for Der Prinz von Schiras"><figcaption>Back</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/DonQuijote_WA_VS.png" width="620" height="874" alt="Postcard front for Don Quijote"><figcaption><strong>Don Quijote</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/DonQuijote_WA_RS.png" width="620" height="874" alt="Postcard back for Don Quijote"><figcaption>Back</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/PeterPan_VS.png" width="620" height="874" alt="Postcard front for Peter Pan"><figcaption><strong>Peter Pan</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/PeterPan_RS_v3a.png" width="620" height="874" alt="Postcard back for Peter Pan"><figcaption>Back</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/Transit-Foto_VS.png" width="620" height="874" alt="Postcard front for Transit"><figcaption><strong>Transit</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/Transit_RS_v2.png" width="620" height="874" alt="Postcard back for Transit"><figcaption>Back</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20.000 Meilen unter dem Meer_VS-1.jpg" width="421" height="591" alt="Postcard front for 20.000 Meilen unter dem Meer"><figcaption><strong>20.000 Meilen unter dem Meer</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20.000 Meilen unter dem Meer_RS-1.jpg" width="421" height="591" alt="Postcard back for 20.000 Meilen unter dem Meer"><figcaption>Back</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/Hello Stranger_VS-1.jpg" width="421" height="591" alt="Postcard front for Hello Stranger"><figcaption><strong>Hello Stranger</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/Hello Stranger_RS-1.jpg" width="421" height="591" alt="Postcard back for Hello Stranger"><figcaption>Back</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/Romulus_der_Große_VS-1.jpg" width="421" height="591" alt="Postcard front for Romulus der Große"><figcaption><strong>Romulus der Große</strong>, front</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/Romulus_der_Große_RS-1.jpg" width="421" height="591" alt="Postcard back for Romulus der Große"><figcaption>Back</figcaption></figure>
+        </div>
+        <h3 class="case-subheading">Monthly leporello</h3>
+        <p>The full programme across all venues in one folded brochure, with a calendar on the back.</p>
+        <div class="case-gallery case-gallery-single">
+          <figure><img loading="lazy" src="images/theater regensburg/web/20230926_Leporello_Dezember-1.jpg" width="3744" height="850" alt="Leporello for December: programme side"><figcaption><strong>December:</strong> programme side</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20230920_Leporello_Kalender_Dezember-1.jpg" width="3720" height="827" alt="Leporello for December: calendar side"><figcaption>Calendar side</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20231024_Leporello_Januar_DRUCK-1.jpg" width="3744" height="850" alt="Leporello for January: programme side"><figcaption><strong>January:</strong> programme side</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20231024_Leporello_Januar_Kalender_DRUCK-1.jpg" width="3720" height="827" alt="Leporello for January: calendar side"><figcaption>Calendar side</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20231123_Leporello_Februar-1.jpg" width="3744" height="850" alt="Leporello for February: programme side"><figcaption><strong>February:</strong> programme side</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20231123_Leporello_Februar_Kalender-1.jpg" width="3720" height="827" alt="Leporello for February: calendar side"><figcaption>Calendar side</figcaption></figure>
+        </div>
+        <h3 class="case-subheading">Concert flyer</h3>
+        <div class="case-gallery ">
+          <figure><img loading="lazy" src="images/theater regensburg/web/20231219_Konzertflyer_FebMaer-1.jpg" width="1630" height="827" alt="Concert flyer February and March, inside"><figcaption>Inside: three concerts with programme and tickets</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20231219_Konzertflyer_FebMaer-2.jpg" width="1630" height="827" alt="Concert flyer February and March, outside"><figcaption>Outside</figcaption></figure>
+        </div>
+        <h3 class="case-subheading">Magazine ads</h3>
+        <p>Monthly premiere ads in the local culture magazine <em>Wohin</em>.</p>
+        <div class="case-gallery case-gallery-cols-3">
+          <figure><img loading="lazy" src="images/theater regensburg/web/20240118_Anzeigen_Wohin_Premieren_April-1.jpg" width="374" height="1083" alt="Premieres ad for April in the Wohin magazine"><figcaption>April</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20240118_Anzeigen_Wohin_Premieren_Mai-1.jpg" width="374" height="1083" alt="Premieres ad for May in the Wohin magazine"><figcaption>May</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/20240118_Anzeigen_Wohin_Premieren_Juni-1.jpg" width="374" height="1083" alt="Premieres ad for June in the Wohin magazine"><figcaption>June</figcaption></figure>
+        </div>
+        <h3 class="case-subheading">Window posters</h3>
+        <p>Monthly posters for the box office windows at Bismarckplatz.</p>
+        <div class="case-gallery case-gallery-cols-6">
+          <figure><img loading="lazy" src="images/theater regensburg/web/FensterBismarckplatz_April-1.jpg" width="721" height="1865" alt="Window poster at Bismarckplatz for April, panel 1"><figcaption>April, panel 1</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/FensterBismarckplatz_April-2.jpg" width="721" height="1865" alt="Window poster at Bismarckplatz for April, panel 2"><figcaption>Panel 2</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/FensterBismarckplatz_Mai-1.jpg" width="721" height="1865" alt="Window poster at Bismarckplatz for May, panel 1"><figcaption>May, panel 1</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/FensterBismarckplatz_Mai-2.jpg" width="721" height="1865" alt="Window poster at Bismarckplatz for May, panel 2"><figcaption>Panel 2</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/FensterBismarckplatz_Juni-1.jpg" width="721" height="1865" alt="Window poster at Bismarckplatz for June, panel 1"><figcaption>June, panel 1</figcaption></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/web/FensterBismarckplatz_Juni-2.jpg" width="721" height="1865" alt="Window poster at Bismarckplatz for June, panel 2"><figcaption>Panel 2</figcaption></figure>
+        </div>
+        <h3 class="case-subheading">Social media</h3>
+        <div class="case-gallery case-gallery-cols-3">
+          <figure><img loading="lazy" src="images/theater regensburg/01_As-ONE.jpg" width="1000" height="1000" alt="Social media post: As One"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/03_Führung.jpg" width="1000" height="1000" alt="Social media post: theatre tour"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/04_Lottchen.jpg" width="1000" height="1000" alt="Social media post: Lottchen"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/06_Bilder.jpg" width="1000" height="1000" alt="Social media post: Bilder"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/Abendstern.png" width="1000" height="1000" alt="Social media post: Abendstern"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/Open-Mic-neu.jpg" width="1000" height="1000" alt="Social media post: Open Mic"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/OpenMicNight.png" width="1000" height="1000" alt="Social media post: Open Mic Night"></figure>
+          <figure><img loading="lazy" src="images/theater regensburg/Transit.png" width="1000" height="1000" alt="Social media post: Transit"></figure>
+        </div>
+        <div class="case-gallery case-gallery-cols-3">
+          <figure><img loading="lazy" src="images/Carousel_Theater3.svg" width="275" height="572" alt="Instagram post for the play Ernst gemeint"><figcaption><strong>Weekly social format:</strong> a recurring post series for Instagram and Facebook.</figcaption></figure>
+          <figure><img loading="lazy" src="images/Carousel_Theater4.svg" width="275" height="572" alt="Instagram post for the play Fast verzweifelt"><figcaption>Weekly social format.</figcaption></figure>
+          <figure><img loading="lazy" src="images/Carousel_Theater6.svg" width="275" height="572" alt="Instagram post from the weekly series"><figcaption>Weekly social format.</figcaption></figure>
+        </div>
+      </section>
+      <section class="case-section">
+        <h2>Result</h2>
+        <p>A reliable, recognisable visual presence that supported the theatre's campaigns and strengthened its brand identity.</p>
+      </section>
+    </div>
+  </template>
+
+  <template data-case data-slug="berlinale-press-dossier" data-layout="B"
+    data-title="Berlinale Press Dossier" data-discipline="Motion &amp; Graphic Design" data-categories="motion-graphic"
+    data-teaser="130 pages of press coverage, edited and designed for sponsors."
+    data-card-image="images/berlinale/berlinale-preview.svg" data-card-alt="Spreads from the Berlinale press dossier">
+    <dl class="snapshot">
+      <div><dt>Role</dt><dd>Press Officer &amp; Graphic Designer (fixed-term)</dd></div>
+      <div><dt>Editions</dt><dd>69th and 70th Berlin International Film Festival (2019, 2020)</dd></div>
+      <div><dt>Format</dt><dd>130-page editorial dossier</dd></div>
+      <div><dt>Tools</dt><dd>Adobe InDesign · Adobe Photoshop · Meltwater</dd></div>
+    </dl>
+    <figure class="case-hero">
+      <img src="images/berlinale/berlinale-preview.svg" width="1600" height="1200" alt="Spreads from the Berlinale press dossier">
+    </figure>
+    <div class="case-body">
+      <section class="case-section">
+        <h2>Brief</h2>
+        <p>After each festival, the Berlinale needed to show its main sponsors how far the festival's media reach extended.</p>
+      </section>
+      <section class="case-section">
+        <h2>Approach</h2>
+        <p>I combined analysis and design: tracking daily press coverage during the festival, then editing the most relevant articles and visuals into a clear editorial structure. <!-- TODO (optional): 1 sentence on the dossier's structure or grid --></p>
+      </section>
+      <section class="case-section">
+        <h2>Work</h2>
+        <p>International press quotes set as large typographic pages, paired with festival photos and magazine coverage.</p>
+        <div class="case-gallery case-gallery-single">
+          <figure><img loading="lazy" src="images/berlinale/00_Title Berlinale Pages.png" width="587" height="408" alt="Cover of the press dossier for the 69th Berlin International Film Festival, front and back"></figure>
+        </div>
+        <h3 class="case-subheading">70th Berlinale (2020)</h3>
+        <div class="case-gallery">
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 1.jpg" width="430" height="304" alt="Spread from the 2020 dossier: festival introduction and red carpet photo"></figure>
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 2.png" width="430" height="305" alt="Spread 2 from the 2020 press dossier"></figure>
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 3.png" width="430" height="305" alt="Spread 3 from the 2020 press dossier"></figure>
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 4.png" width="430" height="305" alt="Spread 4 from the 2020 press dossier"></figure>
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 5.png" width="430" height="305" alt="Spread 5 from the 2020 press dossier"></figure>
+        </div>
+        <h3 class="case-subheading">69th Berlinale (2019)</h3>
+        <div class="case-gallery">
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 6.png" width="430" height="305" alt="Spread 1 from the 2019 press dossier"></figure>
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 7.png" width="430" height="304" alt="Spread 2 from the 2019 press dossier"></figure>
+          <figure><img loading="lazy" src="images/berlinale/Berlinale 8.png" width="430" height="305" alt="Spread 3 from the 2019 press dossier"></figure>
+        </div>
+      </section>
+      <section class="case-section">
+        <h2>Result</h2>
+        <p>A representative retrospective that made the festival's media impact visible to its sponsors, produced for two festival editions.</p>
+      </section>
+    </div>
+  </template>
+
+  <!-- ==================== SERIES (lightbox) ==================== -->
+  <!-- Each <figure> becomes one lightbox slide. data-type: image (default) · video · link -->
+  <template data-series="eurex-explainer">
+    <!-- TODO: role (script to final cut: confirm) and text: message, audience, visual approach -->
+    <figure data-type="link" data-src="https://vimeo.com/801166735" data-label="Watch on Vimeo" data-alt="Eurex Communication Services explainer video on Vimeo">
+      <figcaption><strong>Eurex Communication Services Explainer.</strong> A scripted explainer video for Eurex's information channels. <em>After Effects · Premiere Pro</em></figcaption>
+    </figure>
+  </template>
+
+  <!-- Lightbox: single images and series -->
+  <dialog class="image-lightbox" aria-label="Media viewer">
+    <button class="image-lightbox-close" type="button" aria-label="Close viewer">&times;</button>
+    <button class="image-lightbox-nav image-lightbox-prev" type="button" aria-label="Previous">‹</button>
+    <button class="image-lightbox-nav image-lightbox-next" type="button" aria-label="Next">›</button>
+    <figure>
+      <div class="image-lightbox-stage">
+        <img class="image-lightbox-image" alt="">
+        <video class="image-lightbox-video" controls playsinline preload="none" hidden></video>
+        <a class="image-lightbox-link button button-primary" target="_blank" rel="noopener" hidden>Watch on YouTube <span aria-hidden="true">↗</span></a>
+      </div>
+      <figcaption class="image-lightbox-caption"></figcaption>
+      <p class="image-lightbox-counter" aria-live="polite"></p>
+    </figure>
+  </dialog>
+
   <script src="main.js"></script>
+
 </body>
 </html>
