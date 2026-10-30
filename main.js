@@ -4,7 +4,7 @@ const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 const progressBetween = (value, start, end) => clamp((value - start) / (end - start), 0, 1);
 const easeInOut = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const SITE_NAME = 'Sophia Lattermann';
-const CATEGORIES = ['product', 'motion-graphic', '3d', 'illustration-art'];
+const CATEGORIES = ['product', 'motion-graphic', 'art'];
 
 // ---------- CURSOR BLOB ----------
 const blob = document.getElementById('cursorBlob');
@@ -520,7 +520,7 @@ function observeElements(container) {
 }
 
 // ---------- WORK FILTERS ----------
-// One filter for all work; the URL keeps the choice (#/work?filter=3d).
+// One filter for all work; the URL keeps the choice (#/work?filter=art).
 const filterButtons = document.querySelectorAll('.project-filter');
 const workCards = document.querySelectorAll('#page-work .project-card');
 const filterStatus = document.querySelector('.filter-status');

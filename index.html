@@ -49,7 +49,7 @@
 
   <!--
     Routing (main.js): #/ · #/work · #/work?filter=<category> · #/work/<slug> · #/about · #/impressum · #/datenschutz
-    Categories everywhere: product · motion-graphic · 3d · illustration-art
+    Categories everywhere: product · motion-graphic · art
   -->
   <main id="main">
 
@@ -129,8 +129,7 @@
         <button class="project-filter" type="button" data-home-filter="all" aria-pressed="true">All</button>
         <button class="project-filter" type="button" data-home-filter="product" aria-pressed="false">Product Design (UX/UI)</button>
         <button class="project-filter" type="button" data-home-filter="motion-graphic" aria-pressed="false">Motion &amp; Graphic Design</button>
-        <button class="project-filter" type="button" data-home-filter="3d" aria-pressed="false">3D Design</button>
-        <button class="project-filter" type="button" data-home-filter="illustration-art" aria-pressed="false">Illustration &amp; Art</button>
+        <button class="project-filter" type="button" data-home-filter="art" aria-pressed="false">2D/3D Art</button>
       </div>
       <!-- Filled by main.js with every case study (data-featured-line, else data-teaser) -->
       <div class="case-carousel" data-featured-cards tabindex="0" aria-label="Case studies, scroll horizontally"></div>
@@ -205,14 +204,14 @@
         <div class="pitch-copy reveal">
           <p class="pitch-kicker" data-speed="0.04"><span>03</span> 3D Design</p>
           <h2 data-speed="0.08">Objects and worlds you want to explore</h2>
-          <p class="pitch-lead" data-speed="0.13">Modelled, textured and lit in Blender and 3ds Max: game-ready assets, product visualisations and interactive 3D on the web.</p>
-          <ul class="pitch-tags" data-speed="0.18"><li>Game Assets</li><li>Product Visualisation</li><li>Interactive 3D (Three.js)</li><li>Texturing &amp; Lighting</li></ul>
-          <a href="#/work?filter=3d" class="pitch-featured" data-speed="0.22">
+          <p class="pitch-lead" data-speed="0.13">Modelled, textured and lit in Blender and 3ds Max: game-ready assets, product visualisations and stylised environments.</p>
+          <ul class="pitch-tags" data-speed="0.18"><li>Game Assets</li><li>Product Visualisation</li><li>Stylised Environments</li><li>Texturing &amp; Lighting</li></ul>
+          <a href="https://sophiafena.github.io/portfolio/#ramen-world" class="pitch-featured" data-speed="0.22" target="_blank" rel="noopener">
             <span class="pitch-featured-label">Featured</span>
-            <span>Interactive 3D Website with Three.js</span>
+            <span>Ramen World: a stylised game environment</span>
             <span aria-hidden="true">→</span>
           </a>
-          <a href="#/work?filter=3d" class="pitch-see-all" data-speed="0.24">See all 3D Design <span aria-hidden="true">→</span></a>
+          <a href="#/work?filter=art" class="pitch-see-all" data-speed="0.24">See all 2D/3D Art <span aria-hidden="true">→</span></a>
         </div>
         <figure class="pitch-visual reveal" data-speed="0.2" data-tilt="-5" data-zoom="0.08">
           <!-- Placeholder: replace the .orb with your graphic, e.g. <img src="images/skills/skill-3d.svg" alt="..."> -->
@@ -235,7 +234,7 @@
             <span>ReciNote: illustration system for a mobile app</span>
             <span aria-hidden="true">→</span>
           </a>
-          <a href="#/work?filter=illustration-art" class="pitch-see-all" data-speed="0.24">See all Illustration &amp; Art <span aria-hidden="true">→</span></a>
+          <a href="#/work?filter=art" class="pitch-see-all" data-speed="0.24">See all 2D/3D Art <span aria-hidden="true">→</span></a>
         </div>
         <figure class="pitch-visual reveal" data-speed="0.2" data-tilt="-5" data-zoom="0.08">
           <!-- Placeholder: replace the .orb with your graphic, e.g. <img src="images/skills/skill-art.svg" alt="..."> -->
@@ -296,20 +295,35 @@
         <button class="project-filter" type="button" data-filter="all" aria-pressed="true">All</button>
         <button class="project-filter" type="button" data-filter="product" aria-pressed="false">Product Design (UX/UI)</button>
         <button class="project-filter" type="button" data-filter="motion-graphic" aria-pressed="false">Motion &amp; Graphic Design</button>
-        <button class="project-filter" type="button" data-filter="3d" aria-pressed="false">3D Design</button>
-        <button class="project-filter" type="button" data-filter="illustration-art" aria-pressed="false">Illustration &amp; Art</button>
+        <button class="project-filter" type="button" data-filter="art" aria-pressed="false">2D/3D Art</button>
       </div>
       <p class="filter-status" role="status" aria-live="polite"></p>
 
       <!-- main.js adds the case-study cards in front of the series cards below (template order). -->
       <div class="case-grid work-grid" data-case-cards>
-          <!-- Artist portfolio: replace the href with the final URL -->
-          <a class="project-card series-card" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener" data-category="illustration-art 3d">
-            <img class="project-card-img" loading="lazy" src="images/illustration/surreal2.jpg" width="1500" height="2000" alt="Surreal acrylic painting: a clock face with a human face, a crooked tree, a stone staircase and thorny vines">
+          <!-- Links into the 2D/3D artist portfolio (German) -->
+          <a class="project-card series-card" href="https://sophiafena.github.io/portfolio/#iconset" target="_blank" rel="noopener" data-category="art">
+            <img class="project-card-img" loading="lazy" src="images/card_three_art.png" width="1000" height="750" alt="Three hand-painted underwater icons: a starfish, a pearl and a coral">
             <span class="project-card-body">
-              <span class="case-card-discipline">Illustration &amp; Art · 3D Design</span>
-              <span class="playground-title">Artist Portfolio</span>
-              <span class="playground-meta">Paintings, illustrations and 3D work on my artist website. Opens in a new tab ↗</span>
+              <span class="case-card-discipline">2D/3D Art</span>
+              <span class="playground-title">Illustrated Icons for Games</span>
+              <span class="playground-meta">A hand-painted set of underwater item icons, from sketch and colour palette to the finished icon. Opens in a new tab ↗</span>
+            </span>
+          </a>
+          <a class="project-card series-card" href="https://sophiafena.github.io/portfolio/#pixelart" target="_blank" rel="noopener" data-category="art">
+            <img class="project-card-img" loading="lazy" src="images/pixelart_set.png" width="1400" height="1000" alt="Four 32 × 32 pixel art sprites: a fish, a lantern, a toadstool and an orange">
+            <span class="project-card-body">
+              <span class="case-card-discipline">2D/3D Art</span>
+              <span class="playground-title">Pixel Art Set</span>
+              <span class="playground-meta">Eight item sprites on a 32 × 32 grid, including an animated fish. Opens in a new tab ↗</span>
+            </span>
+          </a>
+          <a class="project-card series-card" href="https://sophiafena.github.io/portfolio/#nintendo-switch" target="_blank" rel="noopener" data-category="art">
+            <img class="project-card-img" loading="lazy" src="images/3d_card.jpg" width="1600" height="993" alt="3D render of a ramen shop counter with bowls, chopsticks and orange curtains">
+            <span class="project-card-body">
+              <span class="case-card-discipline">2D/3D Art</span>
+              <span class="playground-title">3D Work</span>
+              <span class="playground-meta">Hard-surface modelling, a stylised game environment and animation in Blender and 3ds Max. Opens in a new tab ↗</span>
             </span>
           </a>
           <button class="project-card series-card" type="button" data-category="motion-graphic" data-series="eurex-explainer">
@@ -338,38 +352,27 @@
         <div class="about-text">
           <h2>Hi, I'm Sophia.</h2>
           <p>I'm a multidisciplinary designer based in Bavaria, working across UX/UI and interaction design, motion graphics, 3D and illustration. I love turning complex ideas into clear, compelling experiences.</p>
-          <p>At Deutsche Börse, I lead end-to-end design for digital products, from user research and prototyping to design systems and multimedia. I work closely with product teams and developers, and I speak their language: HTML, CSS and JavaScript.</p>
+          <p>At Deutsche Börse, I lead end-to-end design for digital products, from user research and prototyping to design systems and multimedia. I work closely with product teams and developers.</p>
           <!-- TODO: one paragraph on your path from journalism and political science into design. Core message: "I make complex things clear." -->
         </div>
       </div>
     </div>
 
-    <section class="about-section" aria-labelledby="how-title">
-      <h2 id="how-title">How I work</h2>
-      <!-- TODO: draft texts, please review and approve -->
-      <ol class="how-steps">
-        <li class="skill-card stagger-1"><span class="skill-number">01</span><h3>Understand</h3><p>I start by listening to users, stakeholders and the data until the real problem is clear.</p></li>
-        <li class="skill-card stagger-2"><span class="skill-number">02</span><h3>Explore</h3><p>I sketch several directions quickly and compare them before polishing any one of them.</p></li>
-        <li class="skill-card stagger-3"><span class="skill-number">03</span><h3>Decide</h3><p>I choose the option that best serves users and the business, and make the reasons visible to the team.</p></li>
-        <li class="skill-card stagger-4"><span class="skill-number">04</span><h3>Deliver</h3><p>I hand over documented components and specs, and stay close until it works in the real product.</p></li>
-      </ol>
-    </section>
-
     <section class="about-section beyond" aria-labelledby="beyond-title">
       <div class="beyond-copy">
         <h2 id="beyond-title">Beyond the screen</h2>
-        <p>Away from product work, I illustrate and paint: digital food studies of colour and texture, and surreal acrylic paintings on canvas.</p>
-        <a href="https://ARTIST-PORTFOLIO-URL" class="text-link" target="_blank" rel="noopener">Visit my artist portfolio <span aria-hidden="true">↗</span></a>
+        <p>Away from product work, I create 2D and 3D art: hand-painted game icons, pixel art, character design, figure drawing, 3D environments and surreal acrylic paintings.</p>
+        <a href="https://sophiafena.github.io/portfolio/" class="text-link" target="_blank" rel="noopener">Visit my artist portfolio <span aria-hidden="true">↗</span></a>
       </div>
       <div class="beyond-gallery">
-        <a class="beyond-item" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">
-          <img loading="lazy" src="images/illustration/pfirsich.jpg" width="2000" height="1995" alt="Acrylic painting of a peach">
+        <a class="beyond-item" href="https://sophiafena.github.io/portfolio/" target="_blank" rel="noopener">
+          <img loading="lazy" src="images/art_1.png" width="700" height="700" alt="Hand-painted starfish icon on seaweed">
         </a>
-        <a class="beyond-item" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">
-          <img loading="lazy" src="images/illustration/sushi1.jpg" width="1998" height="2000" alt="Acrylic painting of sushi">
+        <a class="beyond-item" href="https://sophiafena.github.io/portfolio/" target="_blank" rel="noopener">
+          <img loading="lazy" src="images/pixelart_about.png" width="1200" height="1600" alt="Four 32 × 32 pixel art sprites: a fish, a lantern, a toadstool and an orange">
         </a>
-        <a class="beyond-item" href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">
-          <img loading="lazy" src="images/illustration/surreal2.jpg" width="1500" height="2000" alt="Surreal acrylic painting: a clock face with a human face, a crooked tree, a stone staircase and thorny vines">
+        <a class="beyond-item" href="https://sophiafena.github.io/portfolio/" target="_blank" rel="noopener">
+          <img loading="lazy" src="images/art_3.jpg" width="1200" height="1600" alt="Surreal acrylic painting: a clock face with a human face, a crooked tree, a stone staircase and thorny vines">
         </a>
       </div>
     </section>
@@ -379,10 +382,9 @@
       <div class="skills-grid disciplines-grid">
         <div class="skill-card stagger-1"><div class="skill-number">01</div><h3>Product Design (UX/UI)</h3><p>Research-driven UX/UI for websites, portals and apps, from the first wireframe to a scalable design system.</p></div>
         <div class="skill-card stagger-2"><div class="skill-number">02</div><h3>Motion &amp; Graphic Design</h3><p>Animations, explainer videos, campaigns and editorial design for digital and print.</p></div>
-        <div class="skill-card stagger-3"><div class="skill-number">03</div><h3>3D Design</h3><p>Game-ready assets, product visualisations and interactive 3D on the web.</p></div>
-        <div class="skill-card stagger-4"><div class="skill-number">04</div><h3>Illustration &amp; Art</h3><p>Illustrations for apps and products, food illustration and surreal acrylic paintings.</p></div>
+        <div class="skill-card stagger-3"><div class="skill-number">03</div><h3>2D/3D Art</h3><p>Game icons, pixel art, character design and illustration, 3D assets and environments, and acrylic paintings.</p></div>
       </div>
-      <p class="disciplines-also">Also: Marketing, Front-end (HTML, CSS, JS)</p>
+      <p class="disciplines-also">Also: Marketing</p>
       <h3 class="tools-title">Tools</h3>
       <ul class="software-list">
         <li><img src="images/logos/figma.svg" width="20" height="20" loading="lazy" alt="" aria-hidden="true"><span>Figma</span></li>
@@ -391,7 +393,6 @@
         <li><span>Lottie</span></li>
         <li><img src="images/logos/jira.svg" width="20" height="20" loading="lazy" alt="" aria-hidden="true"><span>Jira</span></li>
         <li><span>CoreMedia</span></li>
-        <li><span>HTML · CSS · JavaScript</span></li>
       </ul>
     </section>
 
@@ -453,7 +454,7 @@
   <!-- ==================== FOOTER (all pages) ==================== -->
   <footer class="site-footer">
     <nav class="footer-links" aria-label="Footer">
-      <a href="https://ARTIST-PORTFOLIO-URL" target="_blank" rel="noopener">Artist Portfolio</a>
+      <a href="https://sophiafena.github.io/portfolio/" target="_blank" rel="noopener">Artist Portfolio</a>
       <a href="#/impressum">Impressum</a>
       <a href="#/datenschutz">Datenschutz</a>
     </nav>
@@ -823,7 +824,7 @@
   </template>
 
   <template data-case data-slug="recinote" data-layout="B"
-    data-title="ReciNote Mobile App Graphics&Assets" data-discipline="Motion &amp; Graphic Design" data-categories="motion-graphic illustration-art"
+    data-title="ReciNote Mobile App Graphics&Assets" data-discipline="Motion &amp; Graphic Design" data-categories="motion-graphic art"
     data-teaser="One visual language for a recipe app, from illustration to app store." data-featured-line="One visual language, from illustration to app store."
     data-card-image="images/recinote/recinote-preview.svg" data-card-alt="ReciNote loading animation, illustrations and App Store slides">
     <dl class="snapshot">

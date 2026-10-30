@@ -1556,7 +1556,7 @@ button.case-card { padding: 0; font: inherit; color: inherit; text-align: left; 
 .how-steps,
 .disciplines-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   list-style: none;
   border-top: 1px solid var(--line);
 }
